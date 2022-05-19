@@ -1,5 +1,8 @@
 <script>
-export default {};
+// import { ElButton } from "element-plus";
+export default {
+  //   components: { ElButton },
+};
 </script>
 <template>
   <footer>
@@ -30,8 +33,8 @@ export default {};
       <div class="f_box2">
         <h3>Fast access</h3>
         <div>
-          <button>QUESTIONS?</button>
-          <button>SETTINGS</button>
+          <button id="bt1">QUESTIONS?</button>
+          <button id="bt2">SETTINGS</button>
         </div>
       </div>
       <div class="f_box3">
@@ -47,7 +50,7 @@ export default {};
 footer {
   width: 100%;
   height: 200px;
-  background-color: aliceblue;
+  background-color: rgb(20, 122, 211);
 
   > div {
     width: 1024px;
@@ -81,11 +84,37 @@ footer {
   height: 100%;
   > h3 {
     text-align: left;
-    > div {
-      display: inline-block;
+  }
+  > div {
+    text-align: left;
+    > #bt1 {
+      width: 80%;
+      height: 30px;
+      font-size: 14px;
+      text-align: left;
+      margin-bottom: 30px;
+      color: #ffffff;
+      background-color: #0275b1;
+      border-radius: 5px;
+      border: 0px;
+      padding-left: 15px;
+    }
+
+    > #bt2 {
+      width: 80%;
+      height: 30px;
+      font-size: 14px;
+      text-align: left;
+      margin-bottom: 30px;
+      color: #ffffff;
+      background-color: #0275b1;
+      border-radius: 5px;
+      border: 0px;
+      padding-left: 15px;
     }
   }
 }
+
 .f_box3 {
   width: 10%;
   height: 100%;
