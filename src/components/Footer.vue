@@ -27,7 +27,13 @@ export default {};
           </div>
         </div>
       </div>
-      <div class="f_box2"><h3>Fast access</h3></div>
+      <div class="f_box2">
+        <h3>Fast access</h3>
+        <div>
+          <button>QUESTIONS?</button>
+          <button>SETTINGS</button>
+        </div>
+      </div>
       <div class="f_box3">
         <h3>Language</h3>
         <select name="english" id="ENGLISH">
@@ -75,6 +81,9 @@ footer {
   height: 100%;
   > h3 {
     text-align: left;
+    > div {
+      display: inline-block;
+    }
   }
 }
 .f_box3 {
