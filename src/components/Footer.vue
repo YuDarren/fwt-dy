@@ -1,7 +1,8 @@
 <script>
 // import { ElButton } from "element-plus";
+import { ArrowDown } from "@element-plus/icons-vue";
 export default {
-  //   components: { ElButton },
+  components: { ArrowDown },
 };
 </script>
 <template>
@@ -12,21 +13,61 @@ export default {
         <h3>Navigation</h3>
         <div>
           <div>
-            <p>About</p>
-            <p>Careers</p>
-            <p>Advertising</p>
-            <p>Small Business</p>
+            <p>
+              <a href="#" style="color: #000; text-decoration: none">About</a>
+            </p>
+            <p>
+              <a href="#" style="color: #000; text-decoration: none">Careers</a>
+            </p>
+            <p>
+              <a href="#" style="color: #000; text-decoration: none"
+                >Advertising</a
+              >
+            </p>
+            <p>
+              <a href="#" style="color: #000; text-decoration: none"
+                >Small Business</a
+              >
+            </p>
           </div>
           <div>
-            <p>Talent Solutions</p>
-            <p>Marketing Solutions</p>
-            <p>Sales Solutions</p>
-            <p>Safery Center</p>
+            <p>
+              <a href="#" style="color: #000; text-decoration: none"
+                >Talent Solutions</a
+              >
+            </p>
+            <p>
+              <a href="#" style="color: #000; text-decoration: none"
+                >Marketing Solutions</a
+              >
+            </p>
+            <p>
+              <a href="#" style="color: #000; text-decoration: none"
+                >Sales Solutions</a
+              >
+            </p>
+            <p>
+              <a href="#" style="color: #000; text-decoration: none"
+                >Safery Center</a
+              >
+            </p>
           </div>
           <div>
-            <p>Community Guidelines</p>
-            <p>Privacy & Terms</p>
-            <p>Mobile App</p>
+            <p>
+              <a href="#" style="color: #000; text-decoration: none"
+                >Community Guidelines</a
+              >
+            </p>
+            <p>
+              <a href="#" style="color: #000; text-decoration: none"
+                >Privacy & Terms</a
+              >
+            </p>
+            <p>
+              <a href="#" style="color: #000; text-decoration: none"
+                >Mobile App</a
+              >
+            </p>
           </div>
         </div>
       </div>
@@ -39,9 +80,16 @@ export default {
       </div>
       <div class="f_box3">
         <h3>Language</h3>
-        <select name="english" id="ENGLISH">
-          ENGLISH
-        </select>
+
+        <el-button type="primary">Success</el-button>
+        <div>
+          <select style="color: black; border-radius: 3px; border: none">
+            <option>ENGLISH</option>
+            <option>CHINESE</option>
+            <option>JAPAN</option>
+          </select>
+          <el-icon><ArrowDown /></el-icon>
+        </div>
       </div>
     </div>
   </footer>
@@ -50,14 +98,15 @@ export default {
 footer {
   width: 100%;
   height: 200px;
-  background-color: rgb(20, 122, 211);
+  background-color: #f7f9fb;
+  border-top: 1px solid #e7e7e7;
 
   > div {
     width: 1024px;
     height: 100%;
     margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 }
 .img_box {
@@ -121,9 +170,29 @@ footer {
   > h3 {
     text-align: left;
   }
-  > select {
+  > div {
     width: 280px;
+    position: relative;
+  }
+  > div > select {
+    width: 100%;
     height: 35px;
+
+    font-weight: bold;
+    color: #0275b1;
+    > option {
+      font-weight: bold;
+    }
+  }
+  > div > .el-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    pointer-events: none;
+    color: red;
+  }
+  > select:hover {
+    background: blue;
   }
 }
 </style>
