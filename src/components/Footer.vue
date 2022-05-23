@@ -8,82 +8,87 @@ export default {
 <template>
   <footer>
     <div>
-      <div class="img_box">logo</div>
-      <div class="f_box1">
-        <h3>Navigation</h3>
-        <div>
+      <div>
+        <div class="img_box">
+          <img src="../assets/LinkedInIcon.png" />
+          Linked<span>In</span>
+        </div>
+        <div class="f_box1">
+          <h3>Navigation</h3>
           <div>
-            <p>
-              <a href="#" style="color: #000; text-decoration: none">About</a>
-            </p>
-            <p>
-              <a href="#" style="color: #000; text-decoration: none">Careers</a>
-            </p>
-            <p>
-              <a href="#" style="color: #000; text-decoration: none"
-                >Advertising</a
-              >
-            </p>
-            <p>
-              <a href="#" style="color: #000; text-decoration: none"
-                >Small Business</a
-              >
-            </p>
-          </div>
-          <div>
-            <p>
-              <a href="#" style="color: #000; text-decoration: none"
-                >Talent Solutions</a
-              >
-            </p>
-            <p>
-              <a href="#" style="color: #000; text-decoration: none"
-                >Marketing Solutions</a
-              >
-            </p>
-            <p>
-              <a href="#" style="color: #000; text-decoration: none"
-                >Sales Solutions</a
-              >
-            </p>
-            <p>
-              <a href="#" style="color: #000; text-decoration: none"
-                >Safery Center</a
-              >
-            </p>
-          </div>
-          <div>
-            <p>
-              <a href="#" style="color: #000; text-decoration: none"
-                >Community Guidelines</a
-              >
-            </p>
-            <p>
-              <a href="#" style="color: #000; text-decoration: none"
-                >Privacy & Terms</a
-              >
-            </p>
-            <p>
-              <a href="#" style="color: #000; text-decoration: none"
-                >Mobile App</a
-              >
-            </p>
+            <div>
+              <p>
+                <a href="#" style="color: #000; text-decoration: none">About</a>
+              </p>
+              <p>
+                <a href="#" style="color: #000; text-decoration: none"
+                  >Careers</a
+                >
+              </p>
+              <p>
+                <a href="#" style="color: #000; text-decoration: none"
+                  >Advertising</a
+                >
+              </p>
+              <p>
+                <a href="#" style="color: #000; text-decoration: none"
+                  >Small Business</a
+                >
+              </p>
+            </div>
+            <div>
+              <p>
+                <a href="#" style="color: #000; text-decoration: none"
+                  >Talent Solutions</a
+                >
+              </p>
+              <p>
+                <a href="#" style="color: #000; text-decoration: none"
+                  >Marketing Solutions</a
+                >
+              </p>
+              <p>
+                <a href="#" style="color: #000; text-decoration: none"
+                  >Sales Solutions</a
+                >
+              </p>
+              <p>
+                <a href="#" style="color: #000; text-decoration: none"
+                  >Safery Center</a
+                >
+              </p>
+            </div>
+            <div>
+              <p>
+                <a href="#" style="color: #000; text-decoration: none"
+                  >Community Guidelines</a
+                >
+              </p>
+              <p>
+                <a href="#" style="color: #000; text-decoration: none"
+                  >Privacy & Terms</a
+                >
+              </p>
+              <p>
+                <a href="#" style="color: #000; text-decoration: none"
+                  >Mobile App</a
+                >
+              </p>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="f_box2">
-        <h3>Fast access</h3>
-        <div>
-          <button id="bt1">QUESTIONS?</button>
-          <button id="bt2">SETTINGS</button>
+        <div class="f_box2">
+          <h3>Fast access</h3>
+          <div>
+            <button id="bt1">QUESTIONS?</button>
+            <button id="bt2">SETTINGS</button>
+          </div>
         </div>
       </div>
       <div class="f_box3">
         <h3>Language</h3>
-
-        <el-button type="primary">Success</el-button>
         <div>
-          <select style="color: black; border-radius: 3px; border: none">
+          <select>
             <option>ENGLISH</option>
             <option>CHINESE</option>
             <option>JAPAN</option>
@@ -97,26 +102,40 @@ export default {
 <style lang="scss" scoped>
 footer {
   width: 100%;
-  height: 200px;
+  height: auto;
   background-color: #f7f9fb;
   border-top: 1px solid #e7e7e7;
-
+  margin-top: 40px;
+  padding-top: 30px;
   > div {
-    width: 1024px;
-    height: 100%;
+    width: calc(100% - 280px);
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    > div {
+      width: 80%;
+      display: flex;
+    }
   }
 }
 .img_box {
   width: 10%;
   height: 100%;
   text-align: left;
+  font-weight: bold;
+  margin-right: 20px;
+  > img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  > span {
+    color: #0275b1;
+    font-weight: bold;
+  }
 }
 .f_box1 {
-  width: 60%;
-  height: 100%;
+  width: 55%;
   > h3 {
     text-align: left;
   }
@@ -165,34 +184,40 @@ footer {
 }
 
 .f_box3 {
-  width: 10%;
+  width: 20%;
   height: 100%;
+  display: block;
   > h3 {
     text-align: left;
   }
   > div {
     width: 280px;
     position: relative;
-  }
-  > div > select {
-    width: 100%;
-    height: 35px;
 
-    font-weight: bold;
-    color: #0275b1;
-    > option {
+    > select {
+      width: 100%;
+      height: 35px;
+      appearance: none;
       font-weight: bold;
+      font-size: 14px;
+      padding: 10px;
+      color: black;
+      border-radius: 3px;
+      border: none;
+      outline: none;
     }
   }
-  > div > .el-icon {
+  .el-icon {
     position: absolute;
     top: 10px;
     right: 10px;
+    text-align: left;
     pointer-events: none;
-    color: red;
+    color: #0275b1;
+    font-size: larger;
   }
-  > select:hover {
-    background: blue;
-  }
+  // select:hover {
+  //   background: blue;
+  // }
 }
 </style>
