@@ -1,8 +1,13 @@
 <script>
-// import { ElButton } from "element-plus";
-import { ArrowDown } from "@element-plus/icons-vue";
+import { ElButton } from "element-plus";
+import {
+  ArrowDown,
+  QuestionFilled,
+  Setting,
+  Tools,
+} from "@element-plus/icons-vue";
 export default {
-  components: { ArrowDown },
+  components: { ElButton, ArrowDown, QuestionFilled, Setting, Tools },
 };
 </script>
 <template>
@@ -80,8 +85,35 @@ export default {
         <div class="f_box2">
           <h3>Fast access</h3>
           <div>
-            <button id="bt1">QUESTIONS?</button>
-            <button id="bt2">SETTINGS</button>
+            <div id="bt1">
+              <el-button type="primary"
+                ><span style="vertical-align: middle"> QUESTIONS? </span>
+                <el-icon
+                  :size="16"
+                  style="border-radius: 10px
+                    vertical-align: middle;
+                    margin: 28px;
+                    color: #0275b1;
+                    background-color: #ffffff;
+                  "
+                >
+                  <QuestionFilled />
+                </el-icon>
+              </el-button>
+            </div>
+            <div id="id2">
+              <el-button type="primary" style="background-color: #ffffff"
+                ><span style="vertical-align: middle; color: #0275b1">
+                  SETTINGS
+                </span>
+                <el-icon
+                  :size="16"
+                  style="vertical-align: middle; margin: 50px; color: #0275b1"
+                >
+                  <Setting />
+                </el-icon>
+              </el-button>
+            </div>
           </div>
         </div>
       </div>
@@ -156,30 +188,23 @@ footer {
   > div {
     text-align: left;
     > #bt1 {
-      width: 80%;
-      height: 30px;
       font-size: 14px;
-      text-align: left;
       margin-bottom: 30px;
-      color: #ffffff;
-      background-color: #0275b1;
-      border-radius: 5px;
-      border: 0px;
-      padding-left: 15px;
     }
 
     > #bt2 {
-      width: 80%;
-      height: 30px;
       font-size: 14px;
-      text-align: left;
       margin-bottom: 30px;
-      color: #ffffff;
-      background-color: #0275b1;
-      border-radius: 5px;
-      border: 0px;
-      padding-left: 15px;
     }
+  }
+  .el-button {
+    width: 80%;
+    height: 30px;
+    background-color: #0275b1;
+    justify-content: left;
+  }
+  .el-icon {
+    margin: 50px;
   }
 }
 
