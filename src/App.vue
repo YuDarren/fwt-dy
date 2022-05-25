@@ -12,11 +12,8 @@ export default {
 
 <template>
   <Header />
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
   <router-view />
+
   <Footer />
 </template>
 
