@@ -1,43 +1,61 @@
 <script>
-export default {};
+import { reactive, toRefs } from "vue";
+export default {
+  setup() {
+    const state = reactive({
+      circleUrl: "/assets/img/avatar-m11.jpg",
+    });
+
+    const { circleUrl } = toRefs(state);
+    return { circleUrl };
+  },
+};
 </script>
 <template>
   <header>
     <div class="h_menu">
       <div class="logo_block"><img src="../assets/LinkedInIcon.png" /></div>
-      <div class="main_block">
-        <div id="feed_btn">
-          <a href="#">
-            <img src="../assets/menuIcon/feed_icon.svg" />
-            <p>FEED</p></a
-          >
+      <div class="nav_block">
+        <div class="nav_main_block">
+          <div id="feed_btn">
+            <a href="#">
+              <img src="../assets/menuIcon/feed_icon.svg" />
+              <p>FEED</p></a
+            >
+          </div>
+          <div id="network_btn">
+            <a href="#">
+              <img src="../assets/menuIcon/network_icon.svg" />
+              <p>NETWORK</p></a
+            >
+          </div>
+          <div id="jobs_btn">
+            <a href="#">
+              <img src="../assets/menuIcon/jobs_icon.svg" />
+              <p>JOBS</p></a
+            >
+          </div>
+          <div id="chat_btn">
+            <a href="#">
+              <img src="../assets/menuIcon/chat_icon.svg" />
+              <p>CHAT</p></a
+            >
+          </div>
+          <div id="notices_btn">
+            <a href="#">
+              <img src="../assets/menuIcon/notices_icon.svg" />
+              <p>NOTICES</p></a
+            >
+          </div>
         </div>
-        <div id="network_btn">
-          <a href="#">
-            <img src="../assets/menuIcon/network_icon.svg" />
-            <p>NETWORK</p></a
-          >
+        <div class="nav_search_block">
+          <el-icon><Search /></el-icon>
+          <input type="text" placeholder="Search" size="22" />
         </div>
-        <div id="jobs_btn">
-          <a href="#">
-            <img src="../assets/menuIcon/jobs_icon.svg" />
-            <p>JOBS</p></a
-          >
-        </div>
-        <div id="chat_btn">
-          <a href="#">
-            <img src="../assets/menuIcon/chat_icon.svg" />
-            <p>CHAT</p></a
-          >
-        </div>
-        <div id="notices_btn">
-          <a href="#">
-            <img src="../assets/menuIcon/notices_icon.svg" />
-            <p>NOTICES</p></a
-          >
+        <div class="nav_user_block">
+          <el-avatar :size="50" :src="circleUrl" />
         </div>
       </div>
-      <div class="search_block"></div>
       <div class="other_block"></div>
     </div>
   </header>
@@ -51,79 +69,91 @@ header {
     width: 100%;
     border-bottom: 1px solid #f4f4f4;
     display: flex;
-    align-items: center;
 
     > .logo_block {
       height: 100%;
+      width: 5%;
       border-right: 1px solid #f4f4f4;
       padding-left: 40px;
       padding-right: 40px;
-      padding-top: 25px;
+
       > img {
         width: 46px;
         height: 46px;
+        padding-top: 15px;
       }
     }
-    > .main_block {
-      width: 40%;
+    > .nav_block {
+      width: 90%;
       display: flex;
-      position: relative;
-      padding-top: 17px;
-      padding-left: 15px;
-      padding-right: 15px;
+      align-items: center;
+      justify-content: space-between;
 
-      > #feed_btn {
-        width: 20%;
-        height: 100%;
-        padding-top: 17px;
-        padding-bottom: 17px;
-        > a {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin: auto;
-          width: 24px;
-          line-height: 0.9;
-          text-decoration: none;
-          > p {
-            margin: 10px;
-            text-align: center;
-            color: #181818;
-            font-size: 12px;
-            text-transform: uppercase;
-          }
-          > img {
-            display: block;
-            width: 100%;
-            height: auto;
-          }
+      > .nav_main_block {
+        width: 60%;
+        align-items: center;
+        display: flex;
+        padding-top: 20px;
+        > #feed_btn {
+          width: 20%;
+          height: 100%;
+          margin: 0 auto;
+
+          //   > a {
+          //     display: flex;
+          //     flex-direction: column;
+          //     align-items: center;
+          //     margin: auto;
+          //     width: 24px;
+          //     line-height: 0.9;
+
+          //     > p {
+          //       margin: 10px;
+          //       text-align: center;
+          //       color: #181818;
+          //       font-size: 12px;
+          //       text-transform: uppercase;
+          //     }
+          //     > img {
+          //       display: block;
+          //       width: 100%;
+          //       height: auto;
+          //     }
+          //   }
+        }
+
+        > #network_btn {
+          width: 20%;
+          height: 100%;
+        }
+        > #jobs_btn {
+          width: 20%;
+          height: 100%;
+        }
+        > #chat_btn {
+          width: 20%;
+          height: 100%;
+        }
+        > #notices_btn {
+          width: 20%;
+          height: 100%;
         }
       }
-      > #network_btn {
+      > .search_block {
         width: 20%;
-        height: 100%;
-        padding-top: 17px;
-        padding-bottom: 17px;
       }
-      > #jobs_btn {
+      > .user_block {
         width: 20%;
-        height: 100%;
-        padding-top: 17px;
-        padding-bottom: 17px;
-      }
-      > #chat_btn {
-        width: 20%;
-        height: 100%;
-        padding-top: 17px;
-        padding-bottom: 17px;
-      }
-      > #notices_btn {
-        width: 20%;
-        height: 100%;
-        padding-top: 17px;
-        padding-bottom: 17px;
       }
     }
+    > .other_block {
+      width: 5%;
+    }
   }
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
 }
 </style>
