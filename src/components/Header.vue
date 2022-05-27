@@ -1,13 +1,13 @@
 <script>
 import { reactive, toRefs } from "vue";
+import { circleUrl } from "@/assets/LinkedInIcon.png";
 export default {
   setup() {
-    const state = reactive({
-      circleUrl: "/assets/img/avatar-m11.jpg",
-    });
-
-    const { circleUrl } = toRefs(state);
-    return { circleUrl };
+    // // const state = reactive({
+    // //   circleUrl: "../assets/logo.png",
+    // // });
+    // // const { circleUrl } = toRefs(state);
+    // return { circleUrl };
   },
 };
 </script>
@@ -53,10 +53,28 @@ export default {
           <input type="text" placeholder="Search" size="22" />
         </div>
         <div class="nav_user_block">
-          <el-avatar :size="50" :src="circleUrl" />
+          <div class="avatar_img">
+            <img src="../assets/img/avatar-m11.jpg" alt="頭像" />
+          </div>
+          <div class="avatar_info">
+            <div class="avatar_name">
+              <span>James Gordon</span><span>YOU</span>
+            </div>
+            <div class="avatar_news">
+              <span>367 views today</span><span>+32</span
+              ><el-icon><TopRight /></el-icon>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="other_block"></div>
+      <div class="other_block">
+        <div id="other_btn">
+          <a href="#">
+            <img src="../assets/menuIcon/other_icon.svg" />
+            <p>OTHER</p></a
+          >
+        </div>
+      </div>
     </div>
   </header>
 </template>
@@ -139,11 +157,27 @@ header {
           height: 100%;
         }
       }
-      > .search_block {
+      > .nav_search_block {
         width: 20%;
       }
-      > .user_block {
+      > .nav_user_block {
         width: 20%;
+        display: flex;
+        > .avatar_img {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 42px;
+          height: 42px;
+          border-radius: 50%;
+          overflow: hidden;
+          > img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
       }
     }
     > .other_block {
