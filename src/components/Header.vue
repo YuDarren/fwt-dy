@@ -58,11 +58,11 @@ export default {
           </div>
           <div class="avatar_info">
             <div class="avatar_name">
-              <span>James Gordon</span><span>YOU</span>
+              <span class="av1">James Gordon</span><span class="av2">YOU</span>
             </div>
             <div class="avatar_news">
-              <span>367 views today</span><span>+32</span
-              ><el-icon><TopRight /></el-icon>
+              <span class="av_n1">367 views today</span
+              ><span class="av_n2">+32</span><el-icon><TopRight /></el-icon>
             </div>
           </div>
         </div>
@@ -105,64 +105,146 @@ header {
       width: 90%;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: flex-start;
 
       > .nav_main_block {
-        width: 60%;
+        width: 40%;
         align-items: center;
         display: flex;
-        padding-top: 20px;
+
         > #feed_btn {
           width: 20%;
           height: 100%;
-          margin: 0 auto;
+          > a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+            width: 24px;
+            line-height: 0.9;
 
-          //   > a {
-          //     display: flex;
-          //     flex-direction: column;
-          //     align-items: center;
-          //     margin: auto;
-          //     width: 24px;
-          //     line-height: 0.9;
-
-          //     > p {
-          //       margin: 10px;
-          //       text-align: center;
-          //       color: #181818;
-          //       font-size: 12px;
-          //       text-transform: uppercase;
-          //     }
-          //     > img {
-          //       display: block;
-          //       width: 100%;
-          //       height: auto;
-          //     }
-          //   }
+            > p {
+              margin: 0px;
+              margin-top: 10px;
+              text-align: center;
+              color: #181818;
+              font-size: 12px;
+            }
+          }
         }
 
         > #network_btn {
           width: 20%;
           height: 100%;
+          > a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+            width: 24px;
+            line-height: 0.9;
+
+            > p {
+              margin: 0px;
+              margin-top: 10px;
+              text-align: center;
+              color: #181818;
+              font-size: 12px;
+            }
+          }
         }
         > #jobs_btn {
           width: 20%;
           height: 100%;
+          > a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+            width: 24px;
+            line-height: 0.9;
+
+            > p {
+              margin: 0px;
+              margin-top: 10px;
+              text-align: center;
+              color: #181818;
+              font-size: 12px;
+            }
+          }
         }
         > #chat_btn {
           width: 20%;
           height: 100%;
+          > a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+            width: 24px;
+            line-height: 0.9;
+
+            > p {
+              margin: 0px;
+              margin-top: 10px;
+              text-align: center;
+              color: #181818;
+              font-size: 12px;
+            }
+          }
         }
         > #notices_btn {
           width: 20%;
           height: 100%;
+          > a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: auto;
+            width: 24px;
+            line-height: 0.9;
+
+            > p {
+              margin: 0px;
+              margin-top: 10px;
+              text-align: center;
+              color: #181818;
+              font-size: 12px;
+            }
+          }
         }
       }
       > .nav_search_block {
-        width: 20%;
-      }
-      > .nav_user_block {
-        width: 20%;
+        width: 25%;
+        height: 100%;
+        border-left: 1px solid #f4f4f4;
         display: flex;
+        align-items: center;
+        padding-left: 30px;
+        > input {
+          border: none;
+          width: 100%;
+          height: 90%;
+          outline: none;
+          color: #cecece;
+          font-size: 16px;
+          text-transform: capitalize;
+          margin-left: 8px;
+        }
+        .el-icon {
+          color: #0275b1;
+          font-size: 20px;
+        }
+      }
+
+      > .nav_user_block {
+        height: 100%;
+        display: flex;
+        padding-left: 35px;
+        border-left: 1px solid #f4f4f4;
+        width: 30%;
+        align-items: center;
+
         > .avatar_img {
           display: flex;
           justify-content: center;
@@ -178,10 +260,75 @@ header {
             object-fit: cover;
           }
         }
+        > .avatar_info {
+          display: block;
+          margin-left: 15px;
+          text-align: left;
+          > .avatar_name {
+            > .av1 {
+              color: #181818;
+              font-size: 12px;
+              font-weight: 700;
+              text-transform: uppercase;
+            }
+            > .av2 {
+              margin-left: 10px;
+              font-size: 12px;
+              color: rgba(24, 24, 24, 0.2);
+              text-transform: uppercase;
+            }
+          }
+          > .avatar_news {
+            display: flex;
+            align-items: center;
+            padding-top: 10px;
+            font-size: 12px;
+            > .av_n1 {
+              color: #747474;
+            }
+            > .av_n2 {
+              align-items: center;
+              padding-left: 4px;
+              color: #02b033;
+            }
+            .el-icon {
+              align-items: center;
+              padding-left: 4px;
+              color: #02b033;
+            }
+          }
+        }
       }
     }
     > .other_block {
       width: 5%;
+      display: flex;
+      justify-content: center;
+      border-left: 1px solid #f4f4f4;
+      border-right: 1px solid #f4f4f4;
+      margin-right: 40px;
+      > #other_btn {
+        width: 100%;
+        height: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        > a {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin: auto;
+          width: 24px;
+          line-height: 0.9;
+          > p {
+            margin: 0px;
+            margin-top: 10px;
+            text-align: center;
+            color: #181818;
+            font-size: 12px;
+          }
+        }
+      }
     }
   }
 }
