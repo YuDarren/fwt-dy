@@ -17,31 +17,32 @@ export default {
       <div class="logo_block"><img src="../assets/LinkedInIcon.png" /></div>
       <div class="nav_block">
         <div class="nav_main_block">
-          <div id="feed_btn">
+          <div class="nav_btn">
             <a href="#">
               <img src="../assets/menuIcon/feed_icon.svg" />
-              <p>FEED</p></a
-            >
+              <p>FEED</p>
+            </a>
           </div>
-          <div id="network_btn">
+          <div class="nav_btn">
             <a href="#">
               <img src="../assets/menuIcon/network_icon.svg" />
               <p>NETWORK</p></a
             >
           </div>
-          <div id="jobs_btn">
+          <div class="nav_btn">
             <a href="#">
               <img src="../assets/menuIcon/jobs_icon.svg" />
               <p>JOBS</p></a
             >
           </div>
-          <div id="chat_btn">
+          <div class="nav_btn chat">
             <a href="#">
               <img src="../assets/menuIcon/chat_icon.svg" />
-              <p>CHAT</p></a
-            >
+              <p>CHAT</p>
+              <div class="chat-count">3</div>
+            </a>
           </div>
-          <div id="notices_btn">
+          <div class="nav_btn">
             <a href="#">
               <img src="../assets/menuIcon/notices_icon.svg" />
               <p>NOTICES</p></a
@@ -68,7 +69,7 @@ export default {
         </div>
       </div>
       <div class="other_block">
-        <div id="other_btn">
+        <div class="other_btn">
           <a href="#">
             <img src="../assets/menuIcon/other_icon.svg" />
             <p>OTHER</p></a
@@ -112,10 +113,12 @@ header {
         align-items: center;
         display: flex;
 
-        > #feed_btn {
+        > .nav_btn {
           width: 20%;
           height: 100%;
+          position: relative;
           > a {
+            position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -130,89 +133,61 @@ header {
               color: #181818;
               font-size: 12px;
             }
-          }
-        }
-
-        > #network_btn {
-          width: 20%;
-          height: 100%;
-          > a {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: auto;
-            width: 24px;
-            line-height: 0.9;
-
-            > p {
-              margin: 0px;
-              margin-top: 10px;
-              text-align: center;
-              color: #181818;
+            > .chat-count {
+              position: absolute;
               font-size: 12px;
+              top: -6px;
+              right: -6px;
+              height: 16px;
+              width: 16px;
+              color: #ffffff;
+              background-color: orange;
+              border-radius: 50%;
+              text-align: center;
+              line-height: 16px;
             }
           }
         }
-        > #jobs_btn {
-          width: 20%;
-          height: 100%;
-          > a {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: auto;
-            width: 24px;
-            line-height: 0.9;
-
-            > p {
-              margin: 0px;
-              margin-top: 10px;
-              text-align: center;
-              color: #181818;
-              font-size: 12px;
-            }
-          }
+        > .nav_btn:hover p {
+          color: #0275b1;
         }
-        > #chat_btn {
-          width: 20%;
-          height: 100%;
-          > a {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: auto;
-            width: 24px;
-            line-height: 0.9;
+        // > #nav_btn :focus p {
+        //   color: #0275b1;
+        // }
 
-            > p {
-              margin: 0px;
-              margin-top: 10px;
-              text-align: center;
-              color: #181818;
-              font-size: 12px;
-            }
-          }
+        > .nav_btn:after {
+          content: "";
+          display: block;
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: -17px;
+          width: 0%;
+          height: 2px;
+          background: #0275b1;
+          transition: all 0.3s linear;
         }
-        > #notices_btn {
-          width: 20%;
-          height: 100%;
-          > a {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin: auto;
-            width: 24px;
-            line-height: 0.9;
-
-            > p {
-              margin: 0px;
-              margin-top: 10px;
-              text-align: center;
-              color: #181818;
-              font-size: 12px;
-            }
-          }
+        > .nav_btn:hover:after {
+          width: 80px;
         }
+        // > .chat {
+        //   > a {
+        //     position: relative;
+        //     > .chat-count {
+        //       position: absolute;
+        //       font-size: 12px;
+        //       top: -6px;
+        //       right: -6px;
+        //       height: 16px;
+        //       width: 16px;
+        //       color: #ffffff;
+        //       background-color: orange;
+        //       border-radius: 50%;
+        //       text-align: center;
+        //       line-height: 16px;
+        //     }
+        //   }
+        // }
       }
       > .nav_search_block {
         width: 25%;
@@ -302,12 +277,13 @@ header {
     }
     > .other_block {
       width: 5%;
+      position: relative;
       display: flex;
       justify-content: center;
       border-left: 1px solid #f4f4f4;
       border-right: 1px solid #f4f4f4;
       margin-right: 40px;
-      > #other_btn {
+      .other_btn {
         width: 100%;
         height: 100%;
         align-items: center;
@@ -328,6 +304,27 @@ header {
             font-size: 12px;
           }
         }
+      }
+      .other_btn:hover p {
+        color: #0275b1;
+      }
+
+      .other_btn:after {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 77px;
+        bottom: -17px;
+        width: 0%;
+        height: 2px;
+        background: #0275b1;
+        transition: all 0.3s linear;
+      }
+      .other_btn:hover:after {
+        color: #0275b1;
+        width: 100%;
       }
     }
   }
