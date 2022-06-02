@@ -1,14 +1,7 @@
 <script>
-import { reactive, toRefs } from "vue";
-import { circleUrl } from "@/assets/LinkedInIcon.png";
+import { Search, TopRight } from "@element-plus/icons-vue";
 export default {
-  setup() {
-    // // const state = reactive({
-    // //   circleUrl: "../assets/logo.png",
-    // // });
-    // // const { circleUrl } = toRefs(state);
-    // return { circleUrl };
-  },
+  components: { Search, TopRight },
 };
 </script>
 <template>
@@ -151,9 +144,6 @@ header {
         > .nav_btn:hover p {
           color: #0275b1;
         }
-        // > #nav_btn :focus p {
-        //   color: #0275b1;
-        // }
 
         > .nav_btn:after {
           content: "";
@@ -170,24 +160,6 @@ header {
         > .nav_btn:hover:after {
           width: 80px;
         }
-        // > .chat {
-        //   > a {
-        //     position: relative;
-        //     > .chat-count {
-        //       position: absolute;
-        //       font-size: 12px;
-        //       top: -6px;
-        //       right: -6px;
-        //       height: 16px;
-        //       width: 16px;
-        //       color: #ffffff;
-        //       background-color: orange;
-        //       border-radius: 50%;
-        //       text-align: center;
-        //       line-height: 16px;
-        //     }
-        //   }
-        // }
       }
       > .nav_search_block {
         width: 25%;
@@ -196,7 +168,13 @@ header {
         display: flex;
         align-items: center;
         padding-left: 30px;
-        > input {
+        .el-icon {
+          font-size: 22px;
+          width: 24px;
+          height: 24px;
+          color: #0275b1;
+        }
+        input {
           border: none;
           width: 100%;
           height: 90%;
@@ -205,10 +183,6 @@ header {
           font-size: 16px;
           text-transform: capitalize;
           margin-left: 8px;
-        }
-        .el-icon {
-          color: #0275b1;
-          font-size: 20px;
         }
       }
 
