@@ -21,5 +21,7 @@ export default {
 <style lang="scss">
 body {
   margin: 0;
+  font-family: sans-serif;
+  background-color: #f7f9fb;
 }
 </style>
