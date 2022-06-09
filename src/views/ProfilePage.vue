@@ -69,13 +69,48 @@ export default {};
       </div>
       <div class="btn_block">
         <div class="btn_wrap">
-          <div class="btn" tabindex="0">PROFILE</div>
+          <div class="btn" tabindex="0" autofocus>PROFILE</div>
           <div class="btn" tabindex="0">ACTIVITY & INTERESTS</div>
           <div class="btn" tabindex="0">ARTICLES (3)</div>
         </div>
       </div>
-      <div class="userProfile_block"></div>
-      <div class="projects_block"></div>
+      <div class="userProfile_block">
+        <div class="about_tit"><h2>about</h2></div>
+        <div class="about_con">
+          <p>
+            I'm more experienced in eCommerce web projects and mobile banking
+            apps, but also like to work with creative projects, such as landing
+            pages or unusual corporate websites.
+          </p>
+        </div>
+        <div class="about_sm">
+          <a href="#"><h3>see more</h3></a>
+        </div>
+      </div>
+      <div class="projects_block">
+        <div class="project_tit">
+          <h2>Projects</h2>
+          <span>3 of 12</span>
+        </div>
+        <div class="project_main">
+          <div class="main">
+            <div class="main_photo"></div>
+            <div class="main_tit">Zara redesign concept</div>
+            <div class="main_time">UX/UI design, 15.07.2019</div>
+          </div>
+          <div class="main">
+            <div class="main_photo"></div>
+            <div class="main_tit">SCTHON event brand identity</div>
+            <div class="main_time">Graphic design, 03.31.2019</div>
+          </div>
+          <div class="main">
+            <div class="main_photo"></div>
+            <div class="main_tit">Drozd. Brand identity. 2016</div>
+            <div class="main_time">Graphic design, 03.04.2016</div>
+          </div>
+        </div>
+        <div class="project_sa"><a href="#">Show all (12)</a></div>
+      </div>
       <div class="skills_block"></div>
       <div class="exp_block"></div>
       <div class="edu_block"></div>
@@ -284,6 +319,7 @@ export default {};
       .btn_wrap {
         display: flex;
         width: 85%;
+        height: 50px;
         margin-right: auto;
         align-items: flex-end;
         .btn {
@@ -311,7 +347,33 @@ export default {};
           height: 50px;
           color: #fff;
           background: #0275b1;
+          outline: none;
         }
+      }
+    }
+    .userProfile_block {
+      background: #ffffff;
+      border-radius: 4px;
+      display: block;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 5px;
+      padding-bottom: 10px;
+      margin-top: 20px;
+      font-family: Gotham;
+      .about_tit {
+        font-size: 18px;
+        text-transform: capitalize;
+      }
+      .about_con {
+        line-height: 1.5;
+        font-size: 14px;
+      }
+      .about_sm {
+        color: #0275b1;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 12px;
       }
     }
   }
