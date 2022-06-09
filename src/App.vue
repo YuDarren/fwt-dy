@@ -24,4 +24,8 @@ body {
   font-family: sans-serif;
   background-color: #f7f9fb;
 }
+a {
+  background-color: transparent;
+  text-decoration: none;
+}
 </style>

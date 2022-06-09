@@ -52,12 +52,28 @@ export default {};
                   apps (iOS & android) and creative projects. Open to offers.
                 </p>
               </div>
+              <div class="user_btns">
+                <div class="info_btn">
+                  <a href="#"> <span>contact info</span></a>
+                </div>
+                <div class="con_btn">
+                  <a href="#"
+                    ><span id="con_num">1,043</span>
+                    <span> connections</span></a
+                  >
+                </div>
+              </div>
             </div>
-            <div class="user_btns"></div>
           </div>
         </div>
       </div>
-      <div class="btn_block"></div>
+      <div class="btn_block">
+        <div class="btn_wrap">
+          <div class="btn" tabindex="0">PROFILE</div>
+          <div class="btn" tabindex="0">ACTIVITY & INTERESTS</div>
+          <div class="btn" tabindex="0">ARTICLES (3)</div>
+        </div>
+      </div>
       <div class="userProfile_block"></div>
       <div class="projects_block"></div>
       <div class="skills_block"></div>
@@ -79,11 +95,12 @@ export default {};
   width: calc(100% - 260px);
   max-width: 1920px;
   .main_area {
-    border-radius: 4px;
     margin-right: 20px;
     width: 72%;
     .user_block {
       .userbg_photo {
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
         position: relative;
         width: 100%;
         padding-top: 22%;
@@ -155,6 +172,8 @@ export default {};
         padding-top: 26px;
         padding-bottom: 35px;
         background-color: #fff;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
         .wrap {
           display: flex;
           margin: 0 auto;
@@ -179,6 +198,7 @@ export default {};
           .user_about {
             width: calc(100% - 182px);
             padding-left: 12px;
+            display: block;
             .user_name_block {
               display: flex;
               align-items: center;
@@ -212,9 +232,85 @@ export default {};
               }
             }
             .user_profile {
-              font-size: 12px;
+              font-size: 14px;
+            }
+            .user_btns {
+              display: flex;
+              align-items: center;
+              justify-self: start;
+              text-transform: uppercase;
+              margin-top: 14px;
+
+              .info_btn {
+                width: 170px;
+                background: #0275b1;
+                border-radius: 4px;
+                border: 1px solid #0275b1;
+                text-align: center;
+                padding: 10px;
+                a {
+                  span {
+                    font-size: 12px;
+                    line-height: 9px;
+                    color: #ffffff;
+                  }
+                }
+              }
+              .con_btn {
+                margin-left: 10px;
+                width: 170px;
+                border: 1px solid #0275b1;
+                background: #ffffff;
+                border-radius: 4px;
+                text-align: center;
+                padding: 10px;
+                a {
+                  span {
+                    font-size: 12px;
+                    line-height: 9px;
+                    color: #0275b1;
+                  }
+                }
+              }
             }
           }
+        }
+      }
+    }
+    .btn_block {
+      border-bottom: 1px solid #e7e7e7;
+      padding-top: 31px;
+
+      .btn_wrap {
+        display: flex;
+        width: 85%;
+        margin-right: auto;
+        align-items: flex-end;
+        .btn {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 40px;
+          width: 33.333333%;
+          border: 1px solid #e7e7e7;
+          border-radius: 4px 4px 0 0;
+          text-transform: uppercase;
+          font-family: Gotham;
+          color: #181818;
+          cursor: pointer;
+          transition: all 0.2s linear;
+          font-size: 12px;
+        }
+
+        .btn:hover {
+          height: 50px;
+          color: #fff;
+          background: #0275b1;
+        }
+        .btn:focus {
+          height: 50px;
+          color: #fff;
+          background: #0275b1;
         }
       }
     }
