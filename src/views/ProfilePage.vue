@@ -87,7 +87,7 @@ export default {
           </p>
         </div>
         <div class="about_sm">
-          <a href="#"><h3>see more</h3></a>
+          <a href="#"><h4>see more</h4></a>
         </div>
       </div>
       <div class="projects_block">
@@ -125,11 +125,150 @@ export default {
           </div>
         </div>
         <div class="project_sa">
-          <a href="#"> <h3>Show all (12)</h3></a>
+          <a href="#"> <h4>Show all (12)</h4></a>
         </div>
       </div>
-      <div class="skills_block"></div>
-      <div class="exp_block"></div>
+      <div class="skills_block">
+        <div class="skill">
+          <div class="skill_tit"><h2>Skills & Endoresments</h2></div>
+          <div class="skilluser">
+            <div class="skilluser_gp">
+              <div class="skilluser_tit">
+                <div class="sk_tit"><h3>User experience (UX)</h3></div>
+                <div class="sk_num"><h3>6</h3></div>
+              </div>
+              <div class="skilluser_avatar">
+                <div class="sk_av1">
+                  <img src="../assets/img/avatar-m1.jpg" alt="" />
+                </div>
+                <div class="sk_av2">
+                  <img src="../assets/img/avatar-m2.jpg" alt="" />
+                </div>
+                <div class="sk_av3">
+                  <img src="../assets/img/avatar-m3.jpg" alt="" />
+                </div>
+                <div class="sk_av4">
+                  <img src="../assets/img/avatar-m4.jpg" alt="" />
+                </div>
+                <div class="sk_av5">
+                  <img src="../assets/img/avatar-m5.jpg" alt="" />
+                </div>
+                <div class="sk_avnum">+1</div>
+              </div>
+            </div>
+            <div class="skilluser_gp">
+              <div class="skilluser_tit">
+                <div class="sk_tit"><h3>User interface (UI)</h3></div>
+                <div class="sk_num"><h3>6</h3></div>
+              </div>
+              <div class="skilluser_avatar">
+                <div class="sk_av1">
+                  <img src="../assets/img/avatar-m1.jpg" alt="" />
+                </div>
+                <div class="sk_av2">
+                  <img src="../assets/img/avatar-m2.jpg" alt="" />
+                </div>
+                <div class="sk_av3">
+                  <img src="../assets/img/avatar-m3.jpg" alt="" />
+                </div>
+                <div class="sk_av4">
+                  <img src="../assets/img/avatar-m4.jpg" alt="" />
+                </div>
+                <div class="sk_av5">
+                  <img src="../assets/img/avatar-m5.jpg" alt="" />
+                </div>
+                <div class="sk_avnum">+1</div>
+              </div>
+            </div>
+            <div class="skilluser_gp">
+              <div class="skilluser_tit">
+                <div class="sk_tit"><h3>Brand identity</h3></div>
+                <div class="sk_num"><h3>6</h3></div>
+              </div>
+              <div class="skilluser_avatar">
+                <div class="sk_av1">
+                  <img src="../assets/img/avatar-m1.jpg" alt="" />
+                </div>
+                <div class="sk_av2">
+                  <img src="../assets/img/avatar-m2.jpg" alt="" />
+                </div>
+                <div class="sk_av3">
+                  <img src="../assets/img/avatar-m3.jpg" alt="" />
+                </div>
+                <div class="sk_av4">
+                  <img src="../assets/img/avatar-m4.jpg" alt="" />
+                </div>
+                <div class="sk_av5">
+                  <img src="../assets/img/avatar-m5.jpg" alt="" />
+                </div>
+                <div class="sk_avnum">+1</div>
+              </div>
+            </div>
+          </div>
+          <div class="skill_sa">
+            <a href="#"><h4>Show ALL (17)</h4></a>
+          </div>
+        </div>
+      </div>
+      <div class="exp_block">
+        <div class="exp">
+          <div class="exp_tit"><h2>Experience</h2></div>
+          <div class="exp_job">
+            <div class="exp_job_photo"></div>
+            <div class="exp_job_det">
+              <div class="exp_job_name"><h3>Freelance UX/UI designer</h3></div>
+              <div class="exp_job_where">
+                <div class="where">
+                  <span id="where1">Self Employed</span
+                  ><span id="where2">Around the world</span>
+                </div>
+              </div>
+              <div class="exp_job_time">
+                <div class="when">
+                  <span id="when1">Jun 2016 — Present</span
+                  ><span id="when2">3 yrs 3 mos</span>
+                </div>
+              </div>
+              <div class="exp_job_do">
+                <div class="how">
+                  <p>
+                    Work with clients and web studios as freelancer. Work in
+                    next areas: eCommerce web projects; creative landing pages;
+                    iOs and Android apps; corporate web sites and corporate
+                    identity sometimes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="exp_job1">
+            <div class="exp_job_photo"></div>
+            <div class="exp_job_det">
+              <div class="exp_job_name"><h3>UX/UI designer</h3></div>
+              <div class="exp_job_where">
+                <div class="where">
+                  <span id="where1">Upwork</span
+                  ><span id="where2">International</span>
+                </div>
+              </div>
+              <div class="exp_job_time">
+                <div class="when">
+                  <span id="when1">Jun 2019 — Present</span
+                  ><span id="when2">3 mos</span>
+                </div>
+              </div>
+              <div class="exp_job_do">
+                <div class="how">
+                  <p>
+                    New experience with Upwork system. Work in next areas: UX/UI
+                    design, graphic design, interaction design, UX research.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="edu_block"></div>
     </div>
     <div class="side_area">
@@ -390,7 +529,7 @@ export default {
         text-transform: uppercase;
         font-weight: 700;
         font-size: 12px;
-        h3 {
+        h4 {
           color: #0275b1;
         }
       }
@@ -427,9 +566,17 @@ export default {
           display: block;
 
           .main_photo {
+            width: 250px;
+            height: 160px;
+            overflow: hidden;
             img {
               width: 250px;
               height: 160px;
+              transform: scale(1, 1);
+              transition: all 0.5s ease-in-out;
+            }
+            img:hover {
+              transform: scale(1.1, 1.1);
             }
           }
           .main_tit {
@@ -446,10 +593,117 @@ export default {
         text-transform: uppercase;
         font-weight: 700;
         font-size: 12px;
-        h3 {
+        h4 {
           color: #0275b1;
         }
       }
+    }
+    .skills_block {
+      background: #ffffff;
+      border-radius: 4px;
+      font-family: Gotham;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 5px;
+      padding-bottom: 10px;
+      margin-top: 20px;
+      .skill {
+        display: block;
+        .skill_tit {
+          font-size: 18px;
+        }
+        .skilluser {
+          display: flex;
+          justify-content: space-between;
+          .skilluser_gp {
+            width: 200px;
+            border: 1px solid #f4f4f4;
+            border-radius: 4px;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 5px;
+            padding-bottom: 10px;
+            display: block;
+
+            .skilluser_tit {
+              display: flex;
+              justify-content: space-between;
+              .sk_tit {
+                font-size: 14px;
+                font-weight: 500;
+              }
+              .sk_num {
+                font-size: 14px;
+                color: #0275b1;
+                font-weight: bold;
+              }
+            }
+            .skilluser_avatar {
+              display: flex;
+              position: relative;
+              height: 24px;
+              padding-bottom: 5px;
+              padding-top: 5px;
+              img {
+                width: 24px;
+                height: 24px;
+                border-radius: 50%;
+              }
+              .sk_av1 {
+                position: absolute;
+                left: 0px;
+              }
+              .sk_av2 {
+                position: absolute;
+                left: 16px;
+              }
+              .sk_av3 {
+                position: absolute;
+                left: 32px;
+              }
+              .sk_av4 {
+                position: absolute;
+                left: 48px;
+              }
+              .sk_av5 {
+                position: absolute;
+                left: 64px;
+              }
+              .sk_avnum {
+                position: absolute;
+                left: 80px;
+                width: 24px;
+                height: 24px;
+                font-size: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #ffffff;
+                background: #0275b1;
+                border-radius: 50%;
+              }
+            }
+          }
+        }
+        .skill_sa {
+          text-transform: uppercase;
+          font-weight: 700;
+          font-size: 12px;
+          h4 {
+            color: #0275b1;
+          }
+        }
+      }
+    }
+    .exp_block {
+      background: #ffffff;
+      border-radius: 4px;
+      font-family: Gotham;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 5px;
+      padding-bottom: 10px;
+      margin-top: 20px;
     }
   }
   .side_area {
