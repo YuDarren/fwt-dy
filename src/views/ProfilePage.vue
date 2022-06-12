@@ -913,7 +913,6 @@ export default {
       font-family: Gotham;
       .dash {
         display: block;
-
         .dash_tit {
           margin-left: 20px;
           margin-right: 20px;
@@ -926,10 +925,11 @@ export default {
           font-size: 12px;
           border-bottom: 1px solid #e7e7e7;
           .right {
-            font-weight: bold;
+            font-weight: 600;
           }
           .left {
             a {
+              font-weight: 600;
               color: #0275b1;
               text-decoration: underline #0275b1;
               text-underline-offset: 2px;
@@ -964,26 +964,50 @@ export default {
       .visitors {
         display: block;
         .vi_tit {
+          margin-left: 20px;
+          margin-right: 20px;
+          padding-top: 20px;
+          padding-bottom: 20px;
           display: flex;
           align-items: center;
           justify-content: space-between;
+          text-transform: uppercase;
+          font-size: 12px;
+          border-bottom: 1px solid #e7e7e7;
           .left {
+            font-weight: 600;
           }
           .right {
+            a {
+              font-weight: 600;
+              color: #0275b1;
+            }
           }
         }
         .vi_user {
+          display: flex;
+          margin-top: 20px;
+          padding-left: 10px;
           .vi_avatar {
             img {
+              margin: 10px;
               border-radius: 50%;
               width: 52px;
               height: 52px;
             }
           }
           .vi_con {
+            font-size: 14px;
+            margin-top: 15px;
+            margin-left: 10px;
+
             .con_name {
+              font-weight: bold;
             }
             .con_job {
+              margin-top: 5px;
+              margin-bottom: 5px;
+              font-weight: 300;
             }
           }
         }
