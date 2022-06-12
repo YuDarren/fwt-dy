@@ -262,11 +262,106 @@ export default {
           </div>
         </div>
       </div>
-      <div class="edu_block"></div>
+      <div class="edu_block">
+        <div class="edu">
+          <div class="edu_tit"><h2>Education</h2></div>
+          <div class="edu_con">
+            <div class="edu_photo">
+              <img src="../assets/menuIcon/edu_photo.svg" alt="" />
+            </div>
+            <div class="edu_det">
+              <div class="det_tit">
+                <h3>Moscow State Linguistic University</h3>
+              </div>
+              <div class="det_dep">
+                <span
+                  >Bachelor's degree Field Of StudyComputer and Information
+                  Systems Security/Information Assurance</span
+                >
+              </div>
+              <div class="det_time"><span>2013 — 2017</span></div>
+              <div class="det_con">
+                <p>Additional English classes and UX profile courses​.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="side_area">
-      <div class="dash_block"></div>
-      <div class="vistors_block"></div>
+      <div class="dash_block">
+        <div class="dash">
+          <div class="dash_tit">
+            <div class="right">your dashboard</div>
+            <div class="left"><a href="#">go to stats</a></div>
+          </div>
+          <div class="dash_con">
+            <div class="con_num">367</div>
+            <div class="con_word">views today</div>
+          </div>
+          <div class="dash_con">
+            <div class="con_num">15</div>
+            <div class="con_word">posts views</div>
+          </div>
+          <div class="dash_con">
+            <div class="con_num">9</div>
+            <div class="con_word">search appereances</div>
+          </div>
+        </div>
+      </div>
+      <div class="visitors_block">
+        <div class="visitors">
+          <div class="vi_tit">
+            <div class="left">visitors</div>
+            <div class="right"><a href="#">view all</a></div>
+          </div>
+          <div class="vi_user">
+            <div class="vi_avatar">
+              <img src="../assets/img/avatar-w5.jpg" alt="" />
+            </div>
+            <div class="vi_con">
+              <div class="con_name">Audrey Alexander</div>
+              <div class="con_job">Team lead at Google</div>
+            </div>
+          </div>
+          <div class="vi_user">
+            <div class="vi_avatar">
+              <img src="../assets/img/avatar-w1.jpg" alt="" />
+            </div>
+            <div class="vi_con">
+              <div class="con_name">Kyle Fisher</div>
+              <div class="con_job">Product designer at Com...</div>
+            </div>
+          </div>
+          <div class="vi_user">
+            <div class="vi_avatar">
+              <img src="../assets/img/avatar-w2.jpg" alt="" />
+            </div>
+            <div class="vi_con">
+              <div class="con_name">Brandon Wilson</div>
+              <div class="con_job">Senior UX designer</div>
+            </div>
+          </div>
+          <div class="vi_user">
+            <div class="vi_avatar">
+              <img src="../assets/img/avatar-w3.jpg" alt="" />
+            </div>
+            <div class="vi_con">
+              <div class="con_name">Theresa Steward</div>
+              <div class="con_job">iOS developer</div>
+            </div>
+          </div>
+          <div class="vi_user">
+            <div class="vi_avatar">
+              <img src="../assets/img/avatar-w4.jpg" alt="" />
+            </div>
+            <div class="vi_con">
+              <div class="con_name">Darlene Black</div>
+              <div class="con_job">HR-manager, 10 000 connec...</div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="courses_block"></div>
     </div>
   </div>
@@ -717,7 +812,7 @@ export default {
             .exp_job_name {
               h3 {
                 font-weight: bold;
-                font-size: 16px;
+                font-size: 18px;
                 margin: 0px;
               }
             }
@@ -756,10 +851,144 @@ export default {
         }
       }
     }
+    .edu_block {
+      background: #ffffff;
+      border-radius: 4px;
+      font-family: Gotham;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 5px;
+      padding-bottom: 10px;
+      margin-top: 20px;
+      .edu {
+        display: block;
+        .edu_tit {
+          font-size: 18px;
+        }
+        .edu_con {
+          display: flex;
+          padding-bottom: 10px;
+          padding-top: 10px;
+          margin-top: 10px;
+          .edu_photo {
+            width: 54px;
+            height: 54px;
+          }
+          .edu_det {
+            display: block;
+            margin-left: 20px;
+            .det_tit {
+              h3 {
+                font-weight: bold;
+                font-size: 18px;
+                margin: 0px;
+              }
+            }
+            .det_dep {
+              margin-top: 10px;
+              font-size: 14px;
+              font-weight: 500;
+            }
+            .det_time {
+              margin-top: 10px;
+              font-size: 14px;
+              font-weight: 100;
+            }
+            .det_con {
+              margin-top: 10px;
+              font-size: 14px;
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
   }
   .side_area {
     margin-right: 20px;
     width: 28%;
+    .dash_block {
+      background: #ffffff;
+      border-radius: 4px;
+      font-family: Gotham;
+      .dash {
+        display: block;
+
+        .dash_tit {
+          margin-left: 20px;
+          margin-right: 20px;
+          padding-top: 20px;
+          padding-bottom: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          text-transform: uppercase;
+          font-size: 12px;
+          border-bottom: 1px solid #e7e7e7;
+          .right {
+            font-weight: bold;
+          }
+          .left {
+            a {
+              color: #0275b1;
+              text-decoration: underline #0275b1;
+              text-underline-offset: 2px;
+            }
+          }
+        }
+        .dash_con {
+          display: block;
+          margin-left: 20px;
+          margin-right: 20px;
+          margin-top: 10px;
+          padding-top: 0px;
+          padding-bottom: 20px;
+
+          .con_num {
+            font-size: 52px;
+            font-weight: bolder;
+            color: #0275b1;
+          }
+          .con_word {
+            font-size: 14px;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+    .visitors_block {
+      background: #ffffff;
+      border-radius: 4px;
+      font-family: Gotham;
+      margin-top: 20px;
+      .visitors {
+        display: block;
+        .vi_tit {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .left {
+          }
+          .right {
+          }
+        }
+        .vi_user {
+          .vi_avatar {
+            img {
+              border-radius: 50%;
+              width: 52px;
+              height: 52px;
+            }
+          }
+          .vi_con {
+            .con_name {
+            }
+            .con_job {
+            }
+          }
+        }
+      }
+    }
   }
   button {
     border: 0px;
