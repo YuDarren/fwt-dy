@@ -15,7 +15,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss" scoped>
 img {
   width: 24px;
   height: 24px;
