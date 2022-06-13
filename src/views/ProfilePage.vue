@@ -1,7 +1,8 @@
 <script>
 import { MoreFilled, Edit, Upload } from "@element-plus/icons-vue";
+import AvatarIcon from "./AvatarIcon.vue";
 export default {
-  components: { MoreFilled, Edit, Upload },
+  components: { MoreFilled, Edit, Upload, AvatarIcon },
 };
 </script>
 <template>
@@ -138,7 +139,12 @@ export default {
                 <div class="sk_num"><h3>6</h3></div>
               </div>
               <div class="skilluser_avatar">
-                <div class="sk_av1">
+                <AvatarIcon img="avatar-m1" />
+                <AvatarIcon img="avatar-m2" />
+                <AvatarIcon img="avatar-m3" />
+                <AvatarIcon img="avatar-m4" />
+                <AvatarIcon img="avatar-m5" />
+                <!-- <div class="sk_av1">
                   <img src="../assets/img/avatar-m1.jpg" alt="" />
                 </div>
                 <div class="sk_av2">
@@ -152,8 +158,8 @@ export default {
                 </div>
                 <div class="sk_av5">
                   <img src="../assets/img/avatar-m5.jpg" alt="" />
-                </div>
-                <div class="sk_avnum">+1</div>
+                </div> -->
+                <div class="sk_av sk_avnum">+1</div>
               </div>
             </div>
             <div class="skilluser_gp">
@@ -162,7 +168,7 @@ export default {
                 <div class="sk_num"><h3>6</h3></div>
               </div>
               <div class="skilluser_avatar">
-                <div class="sk_av1">
+                <!-- <div class="sk_av1">
                   <img src="../assets/img/avatar-m1.jpg" alt="" />
                 </div>
                 <div class="sk_av2">
@@ -176,7 +182,7 @@ export default {
                 </div>
                 <div class="sk_av5">
                   <img src="../assets/img/avatar-m5.jpg" alt="" />
-                </div>
+                </div> -->
                 <div class="sk_avnum">+1</div>
               </div>
             </div>
@@ -186,7 +192,7 @@ export default {
                 <div class="sk_num"><h3>6</h3></div>
               </div>
               <div class="skilluser_avatar">
-                <div class="sk_av1">
+                <!-- <div class="sk_av1">
                   <img src="../assets/img/avatar-m1.jpg" alt="" />
                 </div>
                 <div class="sk_av2">
@@ -200,7 +206,7 @@ export default {
                 </div>
                 <div class="sk_av5">
                   <img src="../assets/img/avatar-m5.jpg" alt="" />
-                </div>
+                </div> -->
                 <div class="sk_avnum">+1</div>
               </div>
             </div>
@@ -362,7 +368,41 @@ export default {
           </div>
         </div>
       </div>
-      <div class="courses_block"></div>
+      <div class="courses_block">
+        <div class="courses">
+          <div class="cour_tit">You may like these courses</div>
+          <div class="cour_group">
+            <div class="group">
+              <div class="gr_photo">
+                <img src="../assets/courses_01.png" alt="" />
+              </div>
+              <div class="gr_con">
+                <div class="gr_tit">UX Foundations: Prototyping</div>
+                <div class="gr_watch">27,959 viewers</div>
+              </div>
+            </div>
+            <div class="group">
+              <div class="gr_photo">
+                <img src="../assets/courses_02.png" alt="" />
+              </div>
+              <div class="gr_con">
+                <div class="gr_tit">Designing with Adobe XD and pro</div>
+                <div class="gr_watch">9,122 viewers</div>
+              </div>
+            </div>
+            <div class="group">
+              <div class="gr_photo">
+                <img src="../assets/courses_03.png" alt="" />
+              </div>
+              <div class="gr_con">
+                <div class="gr_tit">UX Foundations: Styles and GUIs</div>
+                <div class="gr_watch">13,858 viewers</div>
+              </div>
+            </div>
+          </div>
+          <div class="cour_sar"><a href="#">See all recomendations</a></div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -732,34 +772,37 @@ export default {
               height: 24px;
               padding-bottom: 5px;
               padding-top: 5px;
-              img {
-                width: 24px;
-                height: 24px;
-                border-radius: 50%;
+              .sk_av + .sk_av {
+                margin-left: -6px;
               }
-              .sk_av1 {
-                position: absolute;
-                left: 0px;
-              }
-              .sk_av2 {
-                position: absolute;
-                left: 16px;
-              }
-              .sk_av3 {
-                position: absolute;
-                left: 32px;
-              }
-              .sk_av4 {
-                position: absolute;
-                left: 48px;
-              }
-              .sk_av5 {
-                position: absolute;
-                left: 64px;
-              }
+              // img {
+              //   width: 24px;
+              //   height: 24px;
+              //   border-radius: 50%;
+              // }
+              // .sk_av1 {
+              //   position: absolute;
+              //   left: 0px;
+              // }
+              // .sk_av2 {
+              //   position: absolute;
+              //   left: 16px;
+              // }
+              // .sk_av3 {
+              //   position: absolute;
+              //   left: 32px;
+              // }
+              // .sk_av4 {
+              //   position: absolute;
+              //   left: 48px;
+              // }
+              // .sk_av5 {
+              //   position: absolute;
+              //   left: 64px;
+              // }
               .sk_avnum {
-                position: absolute;
-                left: 80px;
+                // position: absolute;
+                // left: 80px;
                 width: 24px;
                 height: 24px;
                 font-size: 10px;
@@ -1009,6 +1052,64 @@ export default {
               margin-bottom: 5px;
               font-weight: 300;
             }
+          }
+        }
+      }
+    }
+    .courses_block {
+      background: #ffffff;
+      border-radius: 4px;
+      font-family: Gotham;
+      margin-top: 20px;
+      .courses {
+        display: block;
+        .cour_tit {
+          margin-left: 20px;
+          margin-right: 20px;
+          padding-top: 20px;
+          padding-bottom: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          text-transform: uppercase;
+          font-weight: 600;
+          font-size: 12px;
+          border-bottom: 1px solid #e7e7e7;
+        }
+        .cour_group {
+          display: block;
+          .group {
+            display: flex;
+            align-items: flex-start;
+            .gr_photo {
+              padding: 20px;
+              img {
+                width: 80px;
+                height: 52px;
+                border-radius: 4px;
+              }
+            }
+            .gr_con {
+              padding-top: 20px;
+              .gr_tit {
+                font-size: 16px;
+                font-weight: bolder;
+              }
+              .gr_watch {
+                margin-top: 5px;
+                font-size: 10px;
+                font-weight: 300;
+              }
+            }
+          }
+        }
+        .cour_sar {
+          padding: 20px;
+          text-transform: uppercase;
+          a {
+            color: #0275b1;
+            font-size: 14px;
+            font-weight: 900;
           }
         }
       }
