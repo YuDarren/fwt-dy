@@ -1,5 +1,5 @@
 <script>
-import AvatarIcon from "@/views/AvatarIcon.vue";
+import AvatarIcon from "@/components/ProfilePage/PFLittleCom/Avatar.vue";
 export default {
   components: { AvatarIcon },
 };

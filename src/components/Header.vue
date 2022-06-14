@@ -7,7 +7,7 @@ export default {
 <template>
   <header>
     <div class="h_menu">
-      <div class="logo_block"><img src="../assets/LinkedInIcon.png" /></div>
+      <div class="logo_block"><img src="@/assets/LinkedInIcon.png" /></div>
       <div class="nav_block">
         <div class="nav_main_block">
           <div class="nav_btn">
@@ -88,6 +88,7 @@ header {
       border-right: 1px solid #f4f4f4;
       padding-left: 40px;
       padding-right: 40px;
+      margin-left: 20px;
 
       > img {
         width: 46px;
