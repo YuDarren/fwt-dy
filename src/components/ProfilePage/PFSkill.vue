@@ -15,26 +15,11 @@ export default {
             <div class="sk_num"><h3>6</h3></div>
           </div>
           <div class="skilluser_avatar">
-            <AvatarIcon img="avatar-m1" />
-            <AvatarIcon img="avatar-m2" />
-            <AvatarIcon img="avatar-m3" />
-            <AvatarIcon img="avatar-m4" />
-            <AvatarIcon img="avatar-m5" />
-            <!-- <div class="sk_av1">
-                  <img src="../assets/img/avatar-m1.jpg" alt="" />
-                </div>
-                <div class="sk_av2">
-                  <img src="../assets/img/avatar-m2.jpg" alt="" />
-                </div>
-                <div class="sk_av3">
-                  <img src="../assets/img/avatar-m3.jpg" alt="" />
-                </div>
-                <div class="sk_av4">
-                  <img src="../assets/img/avatar-m4.jpg" alt="" />
-                </div>
-                <div class="sk_av5">
-                  <img src="../assets/img/avatar-m5.jpg" alt="" />
-                </div> -->
+            <AvatarIcon img="avatar-01" />
+            <AvatarIcon img="avatar-02" />
+            <AvatarIcon img="avatar-03" />
+            <AvatarIcon img="avatar-04" />
+            <AvatarIcon img="avatar-05" />
             <div class="sk_av sk_avnum">+1</div>
           </div>
         </div>
@@ -44,21 +29,11 @@ export default {
             <div class="sk_num"><h3>6</h3></div>
           </div>
           <div class="skilluser_avatar">
-            <!-- <div class="sk_av1">
-                  <img src="../assets/img/avatar-m1.jpg" alt="" />
-                </div>
-                <div class="sk_av2">
-                  <img src="../assets/img/avatar-m2.jpg" alt="" />
-                </div>
-                <div class="sk_av3">
-                  <img src="../assets/img/avatar-m3.jpg" alt="" />
-                </div>
-                <div class="sk_av4">
-                  <img src="../assets/img/avatar-m4.jpg" alt="" />
-                </div>
-                <div class="sk_av5">
-                  <img src="../assets/img/avatar-m5.jpg" alt="" />
-                </div> -->
+            <AvatarIcon img="avatar-01" />
+            <AvatarIcon img="avatar-02" />
+            <AvatarIcon img="avatar-03" />
+            <AvatarIcon img="avatar-04" />
+            <AvatarIcon img="avatar-05" />
             <div class="sk_avnum">+1</div>
           </div>
         </div>
@@ -68,21 +43,11 @@ export default {
             <div class="sk_num"><h3>6</h3></div>
           </div>
           <div class="skilluser_avatar">
-            <!-- <div class="sk_av1">
-                  <img src="../assets/img/avatar-m1.jpg" alt="" />
-                </div>
-                <div class="sk_av2">
-                  <img src="../assets/img/avatar-m2.jpg" alt="" />
-                </div>
-                <div class="sk_av3">
-                  <img src="../assets/img/avatar-m3.jpg" alt="" />
-                </div>
-                <div class="sk_av4">
-                  <img src="../assets/img/avatar-m4.jpg" alt="" />
-                </div>
-                <div class="sk_av5">
-                  <img src="../assets/img/avatar-m5.jpg" alt="" />
-                </div> -->
+            <AvatarIcon img="avatar-01" />
+            <AvatarIcon img="avatar-02" />
+            <AvatarIcon img="avatar-03" />
+            <AvatarIcon img="avatar-04" />
+            <AvatarIcon img="avatar-05" />
             <div class="sk_avnum">+1</div>
           </div>
         </div>
@@ -144,34 +109,8 @@ export default {
           .sk_av + .sk_av {
             margin-left: -6px;
           }
-          // img {
-          //   width: 24px;
-          //   height: 24px;
-          //   border-radius: 50%;
-          // }
-          // .sk_av1 {
-          //   position: absolute;
-          //   left: 0px;
-          // }
-          // .sk_av2 {
-          //   position: absolute;
-          //   left: 16px;
-          // }
-          // .sk_av3 {
-          //   position: absolute;
-          //   left: 32px;
-          // }
-          // .sk_av4 {
-          //   position: absolute;
-          //   left: 48px;
-          // }
-          // .sk_av5 {
-          //   position: absolute;
-          //   left: 64px;
-          // }
+
           .sk_avnum {
-            // position: absolute;
-            // left: 80px;
             width: 24px;
             height: 24px;
             font-size: 10px;

@@ -1,6 +1,6 @@
 <template>
   <div class="sk_av">
-    <img :src="require(`../assets/img/${img}.jpg`)" alt="" />
+    <img :src="require(`../assets/img/${img}.png`)" alt="" />
   </div>
 </template>
 
