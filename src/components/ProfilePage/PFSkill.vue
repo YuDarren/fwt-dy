@@ -1,5 +1,5 @@
 <script>
-import AvatarIcon from "@/components/ProfilePage/PFLittleCom/Avatar.vue";
+import AvatarIcon from "@/components/LittleCom/Avatar.vue";
 export default {
   components: { AvatarIcon },
 };
@@ -34,7 +34,7 @@ export default {
             <AvatarIcon img="avatar-03" />
             <AvatarIcon img="avatar-04" />
             <AvatarIcon img="avatar-05" />
-            <div class="sk_avnum">+1</div>
+            <div class="sk_av sk_avnum">+1</div>
           </div>
         </div>
         <div class="skilluser_gp">
@@ -48,7 +48,7 @@ export default {
             <AvatarIcon img="avatar-03" />
             <AvatarIcon img="avatar-04" />
             <AvatarIcon img="avatar-05" />
-            <div class="sk_avnum">+1</div>
+            <div class="sk_av sk_avnum">+1</div>
           </div>
         </div>
       </div>
