@@ -2,8 +2,9 @@
 import {} from "@element-plus/icons-vue";
 import FeedWritepost from "@/components/Feed/FeedWritepost.vue";
 import FeedSortline from "@/components/Feed/FeedSortline.vue";
+import FeedUserpostOne from "@/components/Feed/FeedUserpostOne.vue";
 export default {
-  components: { FeedWritepost, FeedSortline },
+  components: { FeedWritepost, FeedSortline, FeedUserpostOne },
 };
 </script>
 <template>
@@ -11,7 +12,7 @@ export default {
     <div class="fe_main_area">
       <FeedWritepost />
       <FeedSortline />
-      <div class="userpost_block"></div>
+      <FeedUserpostOne />
       <div class="userpost_block"></div>
       <div class="userpost_block"></div>
       <div class="userpost_block"></div>

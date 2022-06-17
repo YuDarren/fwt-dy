@@ -1,7 +1,7 @@
 <script>
-import AvatarIcon from "@/components/LittleCom/Avatar.vue";
+import Avatar from "@/components/LittleCom/Avatar.vue";
 export default {
-  components: { AvatarIcon },
+  components: { Avatar },
 };
 </script>
 <template>
@@ -15,11 +15,11 @@ export default {
             <div class="sk_num"><h3>6</h3></div>
           </div>
           <div class="skilluser_avatar">
-            <AvatarIcon img="avatar-01" />
-            <AvatarIcon img="avatar-02" />
-            <AvatarIcon img="avatar-03" />
-            <AvatarIcon img="avatar-04" />
-            <AvatarIcon img="avatar-05" />
+            <Avatar img="avatar-01" />
+            <Avatar img="avatar-02" />
+            <Avatar img="avatar-03" />
+            <Avatar img="avatar-04" />
+            <Avatar img="avatar-05" />
             <div class="sk_av sk_avnum">+1</div>
           </div>
         </div>
@@ -29,11 +29,11 @@ export default {
             <div class="sk_num"><h3>6</h3></div>
           </div>
           <div class="skilluser_avatar">
-            <AvatarIcon img="avatar-01" />
-            <AvatarIcon img="avatar-02" />
-            <AvatarIcon img="avatar-03" />
-            <AvatarIcon img="avatar-04" />
-            <AvatarIcon img="avatar-05" />
+            <Avatar img="avatar-01" />
+            <Avatar img="avatar-02" />
+            <Avatar img="avatar-03" />
+            <Avatar img="avatar-04" />
+            <Avatar img="avatar-05" />
             <div class="sk_av sk_avnum">+1</div>
           </div>
         </div>
@@ -43,11 +43,11 @@ export default {
             <div class="sk_num"><h3>6</h3></div>
           </div>
           <div class="skilluser_avatar">
-            <AvatarIcon img="avatar-01" />
-            <AvatarIcon img="avatar-02" />
-            <AvatarIcon img="avatar-03" />
-            <AvatarIcon img="avatar-04" />
-            <AvatarIcon img="avatar-05" />
+            <Avatar img="avatar-01" />
+            <Avatar img="avatar-02" />
+            <Avatar img="avatar-03" />
+            <Avatar img="avatar-04" />
+            <Avatar img="avatar-05" />
             <div class="sk_av sk_avnum">+1</div>
           </div>
         </div>
