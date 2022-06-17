@@ -1,14 +1,32 @@
 <script>
 import Posttit from "@/components/LittleCom/Posttit.vue";
 import PostUserinfo from "@/components/LittleCom/PostUserinfo.vue";
-export default { components: { Posttit, PostUserinfo } };
+import { reactive, ref } from "@vue/reactivity";
+export default {
+  components: { Posttit, PostUserinfo },
+  setup() {
+    const name = reactive([
+      "Theresa Steward",
+      "Kyle Fisher",
+      "Brandon Wilson",
+      "Audrey Alexander",
+    ]);
+    const job = reactive([
+      "iOS developer",
+      "Product designer at Commandor Corp.",
+      "Senior UX designer",
+      "Team lead at Google",
+    ]);
+    return { name, job };
+  },
+};
 </script>
 <template>
   <div class="userpost_block">
     <div class="userpost">
       <Posttit />
       <div class="postcon">
-        <PostUserinfo />
+        <PostUserinfo :name="name[0]" :job="job[0]" />
         <div class="postcon_con"></div>
         <div class="postcon_rm"></div>
       </div>

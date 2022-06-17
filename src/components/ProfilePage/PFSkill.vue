@@ -1,7 +1,7 @@
 <script>
-import Avatar from "@/components/LittleCom/Avatar.vue";
+import AvatarMini from "@/components/LittleCom/AvatarMini.vue";
 export default {
-  components: { Avatar },
+  components: { AvatarMini },
 };
 </script>
 <template>
@@ -15,11 +15,11 @@ export default {
             <div class="sk_num"><h3>6</h3></div>
           </div>
           <div class="skilluser_avatar">
-            <Avatar img="avatar-01" />
-            <Avatar img="avatar-02" />
-            <Avatar img="avatar-03" />
-            <Avatar img="avatar-04" />
-            <Avatar img="avatar-05" />
+            <AvatarMini img="avatar-01" />
+            <AvatarMini img="avatar-02" />
+            <AvatarMini img="avatar-03" />
+            <AvatarMini img="avatar-04" />
+            <AvatarMini img="avatar-05" />
             <div class="sk_av sk_avnum">+1</div>
           </div>
         </div>
@@ -29,11 +29,11 @@ export default {
             <div class="sk_num"><h3>6</h3></div>
           </div>
           <div class="skilluser_avatar">
-            <Avatar img="avatar-01" />
-            <Avatar img="avatar-02" />
-            <Avatar img="avatar-03" />
-            <Avatar img="avatar-04" />
-            <Avatar img="avatar-05" />
+            <AvatarMini img="avatar-01" />
+            <AvatarMini img="avatar-02" />
+            <AvatarMini img="avatar-03" />
+            <AvatarMini img="avatar-04" />
+            <AvatarMini img="avatar-05" />
             <div class="sk_av sk_avnum">+1</div>
           </div>
         </div>
@@ -43,11 +43,11 @@ export default {
             <div class="sk_num"><h3>6</h3></div>
           </div>
           <div class="skilluser_avatar">
-            <Avatar img="avatar-01" />
-            <Avatar img="avatar-02" />
-            <Avatar img="avatar-03" />
-            <Avatar img="avatar-04" />
-            <Avatar img="avatar-05" />
+            <AvatarMini img="avatar-01" />
+            <AvatarMini img="avatar-02" />
+            <AvatarMini img="avatar-03" />
+            <AvatarMini img="avatar-04" />
+            <AvatarMini img="avatar-05" />
             <div class="sk_av sk_avnum">+1</div>
           </div>
         </div>
@@ -106,6 +106,10 @@ export default {
           height: 24px;
           padding-bottom: 5px;
           padding-top: 5px;
+          img {
+            width: 24px;
+            height: 24px;
+          }
           .sk_av + .sk_av {
             margin-left: -6px;
           }
