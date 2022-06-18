@@ -38,8 +38,10 @@ export default {
       <Posttit :a="tit" />
       <div class="postcon">
         <PostUserinfo :name="name[0]" :job="job[0]" />
-        <div class="postcon_con"></div>
-        <div class="postcon_rm"></div>
+        <div class="postcon_con">
+          <p>{{ post_con }}</p>
+        </div>
+        <div class="postcon_rm"><a href="#">Read more</a></div>
         <PostBtns />
       </div>
     </div>
@@ -55,9 +57,25 @@ export default {
     .postcon {
       display: block;
 
-      .postcon_con {
+      .postcon_con p {
+        padding: 0px 40px 0px 20px;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.5;
+        background: linear-gradient(to top, #ffffff, #181818, #181818);
+        background: -webkit-linear-gradient(to top, #ffffff, #181818, #181818);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
       }
+
       .postcon_rm {
+        font-size: 14px;
+        text-transform: uppercase;
+        padding: 20px;
+        a {
+          color: #0275b1;
+        }
       }
     }
   }
