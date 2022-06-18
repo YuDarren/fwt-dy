@@ -1,9 +1,10 @@
 <script>
 import Posttit from "@/components/LittleCom/Posttit.vue";
 import PostUserinfo from "@/components/LittleCom/PostUserinfo.vue";
+import PostBtns from "@/components/LittleCom/PostBtns.vue";
 import { reactive, ref } from "@vue/reactivity";
 export default {
-  components: { Posttit, PostUserinfo },
+  components: { Posttit, PostUserinfo, PostBtns },
   setup() {
     const name = reactive([
       "Theresa Steward",
@@ -17,25 +18,29 @@ export default {
       "Senior UX designer",
       "Team lead at Google",
     ]);
-    return { name, job };
+    const aname = reactive([
+      "<router-link to='#'>Ted Bell</router-link>",
+      "<a :href='/'>Annette Nguyen</a>",
+      "<a>Cody Hawkins</a>",
+    ]);
+    // const tit = ref(`Ted Bell, Annette Nguyen and Cody Hawkins liked this`);
+    const tit = ref(`${aname[0]}, ${aname[1]} and ${aname[2]} liked this`);
+    const post_con = ref(
+      "What did the Dursleys care if Harry lost his place on the House Quidditch team because he hadn’t practiced all summer? What was it to the Dursleys if Harry went back to school without any of his homework done? The Dursleys were what wizards called Muggles (not a drop of magical blood in their veins)."
+    );
+    return { name, job, tit, post_con };
   },
 };
 </script>
 <template>
   <div class="userpost_block">
     <div class="userpost">
-      <Posttit />
+      <Posttit :a="tit" />
       <div class="postcon">
         <PostUserinfo :name="name[0]" :job="job[0]" />
         <div class="postcon_con"></div>
         <div class="postcon_rm"></div>
-      </div>
-      <div class="post_btns">
-        <div class="good_reply">
-          <div class="good"></div>
-          <div class="reply"></div>
-        </div>
-        <div class="share"></div>
+        <PostBtns />
       </div>
     </div>
   </div>
@@ -53,16 +58,6 @@ export default {
       .postcon_con {
       }
       .postcon_rm {
-      }
-    }
-    .post_btns {
-      .good_reply {
-        .good {
-        }
-        .replt {
-        }
-      }
-      .share {
       }
     }
   }

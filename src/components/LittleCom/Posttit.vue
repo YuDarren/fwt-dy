@@ -2,13 +2,17 @@
 import { MoreFilled } from "@element-plus/icons-vue";
 export default {
   components: { MoreFilled },
+  props: {
+    a: { type: String },
+  },
+  setup(props) {
+    return { props };
+  },
 };
 </script>
 <template>
   <div class="posttit">
-    <div class="tit_con">
-      Ted Bell, Annette Nguyen and Cody Hawkins liked this
-    </div>
+    <div class="tit_con" v-html="props.a"></div>
     <div class="tit_btn">
       <a href="#"
         ><el-icon><MoreFilled /></el-icon
