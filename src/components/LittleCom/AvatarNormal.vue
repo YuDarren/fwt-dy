@@ -10,7 +10,7 @@ export default {
 </script>
 <template>
   <div class="sk_av">
-    <img :src="require(`@/assets/img/${img}.png`)" alt="" />
+    <img :src="require(`@/assets/img/${props.img}.png`)" alt="" />
   </div>
 </template>
 <style lang="scss" scoped>

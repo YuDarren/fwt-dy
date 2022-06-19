@@ -3,8 +3,18 @@ import {} from "@element-plus/icons-vue";
 import FeedWritepost from "@/components/Feed/FeedWritepost.vue";
 import FeedSortline from "@/components/Feed/FeedSortline.vue";
 import FeedUserpostOne from "@/components/Feed/FeedUserpostOne.vue";
+import FeedUserpostTwo from "@/components/Feed/FeedUserpostTwo.vue";
+import FeedUserpostThree from "@/components/Feed/FeedUserpostThree.vue";
+import FeedUserpostFour from "@/components/Feed/FeedUserpostFour.vue";
 export default {
-  components: { FeedWritepost, FeedSortline, FeedUserpostOne },
+  components: {
+    FeedWritepost,
+    FeedSortline,
+    FeedUserpostOne,
+    FeedUserpostTwo,
+    FeedUserpostThree,
+    FeedUserpostFour,
+  },
 };
 </script>
 <template>
@@ -13,9 +23,9 @@ export default {
       <FeedWritepost />
       <FeedSortline />
       <FeedUserpostOne />
-      <div class="userpost_block"></div>
-      <div class="userpost_block"></div>
-      <div class="userpost_block"></div>
+      <!-- <FeedUserpostTwo /> -->
+      <!-- <FeedUserpostThree /> -->
+      <!-- <FeedUserpostFour /> -->
     </div>
     <div class="fe_side_area"></div>
   </div>
