@@ -1,5 +1,4 @@
 <script>
-import {} from "@element-plus/icons-vue";
 import FeedWritepost from "@/components/Feed/FeedWritepost.vue";
 import FeedSortline from "@/components/Feed/FeedSortline.vue";
 import FeedUserpostOne from "@/components/Feed/FeedUserpostOne.vue";
@@ -9,6 +8,9 @@ import FeedUserpostFour from "@/components/Feed/FeedUserpostFour.vue";
 import { reactive } from "@vue/reactivity";
 import FeedMainuser from "@/components/Feed/FeedMainuser.vue";
 import FeedWriteart from "@/components/Feed/FeedWriteart.vue";
+import FeedMygroups from "@/components/Feed/FeedMygroups.vue";
+import FeedHashtag from "@/components/Feed/FeedHashtag.vue";
+import FeedTrending from "@/components/Feed/FeedTrending.vue";
 export default {
   components: {
     FeedWritepost,
@@ -19,12 +21,11 @@ export default {
     FeedUserpostFour,
     FeedMainuser,
     FeedWriteart,
+    FeedMygroups,
+    FeedHashtag,
+    FeedTrending,
   },
-  // props: {
-  //   name: { type: String },
-  //   job: { type: String },
-  //   img: { type: String },
-  // },
+
   setup() {
     const name = reactive([
       "Theresa Steward",
@@ -61,10 +62,9 @@ export default {
     <div class="fe_side_area">
       <FeedMainuser />
       <FeedWriteart />
-      <div class="writeart_block"></div>
-      <div class="mygroups_block"></div>
-      <div class="follow_block"></div>
-      <div class="trending_block"></div>
+      <FeedMygroups />
+      <FeedHashtag />
+      <FeedTrending />
     </div>
   </div>
 </template>
