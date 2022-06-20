@@ -5,18 +5,19 @@ export default {
   props: {
     name: { type: String },
     job: { type: String },
-  },
-  setup(props) {
-    return { props };
+    img: { type: String },
   },
 };
 </script>
 <template>
   <div class="post_user">
-    <AvatarNormal img="avatar54_01" />
+    <div class="post_photo">
+      <!-- <img :src="require(`@/assets/img/${props.img}.png`)" alt="" /> -->
+      <AvatarNormal :img="img" />
+    </div>
     <div class="user_info">
-      <div class="name">{{ props.name }}</div>
-      <div class="job">{{ props.job }}</div>
+      <div class="name">{{ name }}</div>
+      <div class="job">{{ job }}</div>
     </div>
   </div>
 </template>
@@ -25,8 +26,12 @@ export default {
   display: flex;
   align-items: center;
   padding-left: 10px;
-  .sk_av {
-    padding: 10px;
+  .post_photo {
+    padding: 20px 20px 10px 20px;
+    img {
+      width: 52px;
+      height: 52px;
+    }
   }
   .user_info {
     display: block;

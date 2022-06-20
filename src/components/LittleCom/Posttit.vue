@@ -30,6 +30,7 @@ export default {
   .tit_con {
     font-size: 10px;
   }
+
   .tit_btn {
     a {
       color: #181818;

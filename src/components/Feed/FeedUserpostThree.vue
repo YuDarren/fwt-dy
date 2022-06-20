@@ -2,33 +2,25 @@
 import Posttit from "@/components/LittleCom/Posttit.vue";
 import PostUserinfo from "@/components/LittleCom/PostUserinfo.vue";
 import PostBtns from "@/components/LittleCom/PostBtns.vue";
+import PostFile from "@/components/LittleCom/PostFile.vue";
 import { reactive, ref } from "@vue/reactivity";
 export default {
-  components: { Posttit, PostUserinfo, PostBtns },
+  components: { Posttit, PostUserinfo, PostBtns, PostFile },
+  props: {
+    name: { type: String },
+    job: { type: String },
+    img: { type: String },
+  },
   setup() {
-    const name = reactive([
-      "Theresa Steward",
-      "Kyle Fisher",
-      "Brandon Wilson",
-      "Audrey Alexander",
+    const file = reactive([
+      "iOS 11 guidelines for UX/UI designers",
+      "iOS 11 guidelines for developers",
     ]);
-    const job = reactive([
-      "iOS developer",
-      "Product designer at Commandor Corp.",
-      "Senior UX designer",
-      "Team lead at Google",
-    ]);
-    const aname = reactive([
-      "<router-link to='#'>Ted Bell</router-link>",
-      "<a :href='/'>Annette Nguyen</a>",
-      "<a>Cody Hawkins</a>",
-    ]);
-    // const tit = ref(`Ted Bell, Annette Nguyen and Cody Hawkins liked this`);
-    const tit = ref(`${aname[0]}, ${aname[1]} and ${aname[2]} liked this`);
-    const post_con = ref(
-      "What did the Dursleys care if Harry lost his place on the House Quidditch team because he hadn’t practiced all summer? What was it to the Dursleys if Harry went back to school without any of his homework done? The Dursleys were what wizards called Muggles (not a drop of magical blood in their veins)."
-    );
-    return { name, job, tit, post_con };
+    const filekb = reactive(["PDF file, 324 kb", "PDF file, 245 kb"]);
+    const tit = ref("High rated post from your feed");
+    const post_con = ref("There is some new guidelines for iOS");
+    const fileimg = ref(["fileicon"]);
+    return { tit, post_con, fileimg, file, filekb };
   },
 };
 </script>
@@ -37,11 +29,13 @@ export default {
     <div class="userpost">
       <Posttit :a="tit" />
       <div class="postcon">
-        <PostUserinfo :name="name[1]" :job="job[1]" img="avatar54_02" />
+        <PostUserinfo :name="name" :job="job" :img="img" />
         <div class="postcon_con">
           <p>{{ post_con }}</p>
+          <PostFile :name="file[0]" :job="filekb[0]" :img="fileimg" />
+          <PostFile :name="file[1]" :job="filekb[1]" :img="fileimg" />
         </div>
-        <div class="postcon_rm"><a href="#">Read more</a></div>
+        <!-- <div class="postcon_rm"><a href="#">Read more</a></div> -->
         <PostBtns />
       </div>
     </div>
@@ -58,25 +52,25 @@ export default {
       display: block;
 
       .postcon_con p {
-        padding: 0px 40px 0px 20px;
+        padding: 0px 40px 0px 30px;
         font-size: 14px;
         font-weight: 500;
         line-height: 1.5;
-        background: linear-gradient(to top, #ffffff, #181818, #181818);
-        background: -webkit-linear-gradient(to top, #ffffff, #181818, #181818);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
+        // background: linear-gradient(to top, #ffffff, #181818, #181818);
+        // background: -webkit-linear-gradient(to top, #ffffff, #181818, #181818);
+        // background-clip: text;
+        // -webkit-background-clip: text;
+        // color: transparent;
       }
 
-      .postcon_rm {
-        font-size: 14px;
-        text-transform: uppercase;
-        padding: 20px;
-        a {
-          color: #0275b1;
-        }
-      }
+      // .postcon_rm {
+      //   font-size: 14px;
+      //   text-transform: uppercase;
+      //   padding: 20px;
+      //   a {
+      //     color: #0275b1;
+      //   }
+      // }
     }
   }
 }
