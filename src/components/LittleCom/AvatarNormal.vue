@@ -13,10 +13,4 @@ export default {
     <img :src="require(`@/assets/img/${img}.png`)" alt="" />
   </div>
 </template>
-<style lang="scss" scoped>
-img {
-  width: 52px;
-  height: 52px;
-  border-radius: 50%;
-}
-</style>
+<style lang="scss" scoped></style>
