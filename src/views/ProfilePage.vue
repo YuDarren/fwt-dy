@@ -51,11 +51,10 @@ export default {
   width: calc(100% - 260px);
   max-width: 1920px;
   .main_area {
-    margin-right: 20px;
+    margin-right: 40px;
     width: 72%;
   }
   .side_area {
-    margin-right: 20px;
     width: 28%;
   }
 }

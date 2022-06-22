@@ -77,11 +77,10 @@ export default {
   max-width: 1920px;
   font-family: Gothan;
   .fe_main_area {
-    margin-right: 20px;
+    margin-right: 40px;
     width: 72%;
   }
   .fe_side_area {
-    margin-right: 20px;
     width: 28%;
   }
 }

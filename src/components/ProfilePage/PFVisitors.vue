@@ -63,13 +63,12 @@ export default {};
   border-radius: 4px;
   font-family: Gotham;
   margin-top: 20px;
+  padding-bottom: 10px;
   .visitors {
     display: block;
     .vi_tit {
-      margin-left: 20px;
-      margin-right: 20px;
-      padding-top: 20px;
-      padding-bottom: 20px;
+      margin: 0px 30px 10px 30px;
+      padding: 20px 0px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -88,27 +87,25 @@ export default {};
     }
     .vi_user {
       display: flex;
-      margin-top: 20px;
-      padding-left: 10px;
+      align-items: center;
+      padding: 0px 20px;
       .vi_avatar {
+        padding: 5px 10px;
         img {
-          margin: 10px;
           border-radius: 50%;
           width: 52px;
           height: 52px;
         }
       }
       .vi_con {
-        font-size: 14px;
-        margin-top: 15px;
-        margin-left: 10px;
+        display: block;
 
+        font-size: 14px;
         .con_name {
           font-weight: bold;
         }
         .con_job {
-          margin-top: 5px;
-          margin-bottom: 5px;
+          margin: 5px 0px;
           font-weight: 300;
         }
       }

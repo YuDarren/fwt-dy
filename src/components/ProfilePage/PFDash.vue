@@ -32,10 +32,8 @@ export default {};
   .dash {
     display: block;
     .dash_tit {
-      margin-left: 20px;
-      margin-right: 20px;
-      padding-top: 20px;
-      padding-bottom: 20px;
+      margin: 0px 30px;
+      padding: 20px 0px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -56,11 +54,8 @@ export default {};
     }
     .dash_con {
       display: block;
-      margin-left: 20px;
-      margin-right: 20px;
-      margin-top: 10px;
-      padding-top: 0px;
-      padding-bottom: 20px;
+      margin: 0px 30px;
+      padding: 20px 0px;
 
       .con_num {
         font-size: 52px;

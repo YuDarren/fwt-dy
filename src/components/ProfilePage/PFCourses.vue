@@ -48,10 +48,8 @@ export default {};
   .courses {
     display: block;
     .cour_tit {
-      margin-left: 20px;
-      margin-right: 20px;
-      padding-top: 20px;
-      padding-bottom: 20px;
+      margin: 0px 30px;
+      padding: 20px 0px;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -66,7 +64,7 @@ export default {};
         display: flex;
         align-items: flex-start;
         .gr_photo {
-          padding: 20px;
+          padding: 20px 20px 20px 30px;
           img {
             width: 80px;
             height: 52px;
@@ -74,7 +72,7 @@ export default {};
           }
         }
         .gr_con {
-          padding-top: 20px;
+          padding: 20px 30px 0px 0px;
           .gr_tit {
             font-size: 16px;
             font-weight: bolder;
@@ -88,7 +86,7 @@ export default {};
       }
     }
     .cour_sar {
-      padding: 20px;
+      padding: 20px 30px;
       text-transform: uppercase;
       a {
         color: #0275b1;
