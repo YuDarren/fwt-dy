@@ -1,14 +1,36 @@
 <script>
-export default {};
+import NTSidebtns from "@/components/Network/NTSidebtns.vue";
+import NTBtns from "@/components/Network/NTBtns.vue";
+import NTConline from "@/components/Network/NTConline.vue";
+import { ref } from "@vue/reactivity";
+
+export default {
+  components: { NTSidebtns, NTBtns, NTConline },
+  setup() {
+    const con1 = ref(
+      "you have  <a href='#' style='color:#0275b1; margin-left: 5px;'> 2 new connections<a>"
+    );
+    const con2 = ref("recent connections");
+    return { con1, con2 };
+  },
+};
 </script>
 <template>
-  <div class="feed_main_page">
-    <div class="fe_side_area"></div>
-    <div class="fe_main_area"></div>
+  <div class="nt_main_page">
+    <div class="nt_side_area">
+      <NTSidebtns />
+    </div>
+    <div class="nt_main_area">
+      <NTBtns />
+      <NTConline :con="con1" />
+      <div class="ntnewcon_block"></div>
+      <NTConline :con="con2" />
+      <div class="ntusers_block"></div>
+    </div>
   </div>
 </template>
 <style lang="scss" scoped>
-.feed_main_page {
+.nt_main_page {
   display: flex;
   padding-top: 40px;
   margin: 0 auto;
@@ -16,11 +38,11 @@ export default {};
   max-width: 1920px;
   font-family: Gothan;
 
-  .fe_side_area {
+  .nt_side_area {
     margin-right: 40px;
     width: 28%;
   }
-  .fe_main_area {
+  .nt_main_area {
     width: 72%;
   }
 }
