@@ -36,7 +36,7 @@ export default {};
 <style lang="scss" scoped>
 .mygroups_block {
   margin-top: 20px;
-  background: #fff;
+  background: #fcfdfd;
   border-radius: 4px;
   .mygroups {
     .mygroups_tit {
@@ -63,6 +63,7 @@ export default {};
       display: block;
       padding: 10px 30px;
       .groups {
+        background: #fff;
         display: flex;
         align-items: center;
         border: 1px solid #f4f4f4;

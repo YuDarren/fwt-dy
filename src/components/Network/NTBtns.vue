@@ -20,6 +20,7 @@ export default {};
     margin-right: auto;
     align-items: flex-end;
     .btn {
+      background: #fff;
       display: flex;
       justify-content: center;
       align-items: center;

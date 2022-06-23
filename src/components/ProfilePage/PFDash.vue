@@ -26,7 +26,7 @@ export default {};
 
 <style lang="scss" scoped>
 .dash_block {
-  background: #ffffff;
+  background: #fcfdfd;
   border-radius: 4px;
   font-family: Gotham;
   .dash {

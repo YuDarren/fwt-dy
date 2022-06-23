@@ -30,7 +30,7 @@ export default {
 
 <style lang="scss" scoped>
 .hashtag_block {
-  background: #fff;
+  background: #fcfdfd;
   border-radius: 4px;
   margin-top: 20px;
   .hashtag_tit {

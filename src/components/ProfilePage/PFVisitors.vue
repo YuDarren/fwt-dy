@@ -59,7 +59,7 @@ export default {};
 
 <style lang="scss" scoped>
 .visitors_block {
-  background: #ffffff;
+  background: #fcfdfd;
   border-radius: 4px;
   font-family: Gotham;
   margin-top: 20px;

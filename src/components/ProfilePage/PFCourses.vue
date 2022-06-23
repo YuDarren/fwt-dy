@@ -41,7 +41,7 @@ export default {};
 
 <style lang="scss" scoped>
 .courses_block {
-  background: #ffffff;
+  background: #fcfdfd;
   border-radius: 4px;
   font-family: Gotham;
   margin-top: 20px;
