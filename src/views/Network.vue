@@ -2,10 +2,12 @@
 import NTSidebtns from "@/components/Network/NTSidebtns.vue";
 import NTBtns from "@/components/Network/NTBtns.vue";
 import NTConline from "@/components/Network/NTConline.vue";
+import NTNewcon from "@/components/Network/NTNewcon.vue";
+import NTUsers from "@/components/Network/NTUsers.vue";
 import { ref } from "@vue/reactivity";
 
 export default {
-  components: { NTSidebtns, NTBtns, NTConline },
+  components: { NTSidebtns, NTBtns, NTConline, NTNewcon, NTUsers },
   setup() {
     const con1 = ref(
       "you have  <a href='#' style='color:#0275b1; margin-left: 5px;'> 2 new connections<a>"
@@ -23,9 +25,9 @@ export default {
     <div class="nt_main_area">
       <NTBtns />
       <NTConline :con="con1" />
-      <div class="ntnewcon_block"></div>
+      <NTNewcon />
       <NTConline :con="con2" />
-      <div class="ntusers_block"></div>
+      <NTUsers />
     </div>
   </div>
 </template>
