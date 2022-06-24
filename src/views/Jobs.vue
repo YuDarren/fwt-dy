@@ -5,6 +5,7 @@ import JobsInfo from "@/components/Jobs/JobsInfo.vue";
 import JobPostbtn from "@/components/Jobs/JobPostbtn.vue";
 import JobSearches from "@/components/Jobs/JobSearches.vue";
 import JobTracked from "@/components/Jobs/JobTracked.vue";
+import JobsArticles from "@/components/Jobs/JobsArticles.vue";
 import { reactive } from "@vue/reactivity";
 
 export default {
@@ -15,6 +16,7 @@ export default {
     JobPostbtn,
     JobSearches,
     JobTracked,
+    JobsArticles,
   },
   setup() {
     const jobName = reactive([
@@ -114,8 +116,7 @@ export default {
       <JobPostbtn />
       <JobSearches />
       <JobTracked />
-      <div class="job_trached_block"></div>
-      <div class="job_articles_block"></div>
+      <JobsArticles />
     </div>
   </div>
 </template>
