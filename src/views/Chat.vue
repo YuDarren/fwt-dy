@@ -1,14 +1,18 @@
 <script>
-export default {};
+import ChatHistory from "@/components/Chat/ChatHistory.vue";
+export default { components: { ChatHistory } };
 </script>
 <template>
-  <div class="nt_main_page">
-    <div class="nt_side_area"></div>
-    <div class="nt_main_area"></div>
+  <div class="chat_main_page">
+    <div class="chat_side_area">
+      <ChatHistory />
+      <div class="chatstarbtn_block"></div>
+    </div>
+    <div class="chat_main_area"></div>
   </div>
 </template>
 <style lang="scss" scoped>
-.nt_main_page {
+.chat_main_page {
   display: flex;
   padding-top: 40px;
   margin: 0 auto;
@@ -16,11 +20,11 @@ export default {};
   max-width: 1920px;
   font-family: Gothan;
 
-  .nt_side_area {
+  .chat_side_area {
     margin-right: 40px;
     width: 28%;
   }
-  .nt_main_area {
+  .chat_main_area {
     width: 72%;
   }
 }
