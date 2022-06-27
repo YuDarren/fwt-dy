@@ -1,12 +1,13 @@
 <script>
 import ChatHistory from "@/components/Chat/ChatHistory.vue";
-export default { components: { ChatHistory } };
+import ChatStarbtn from "@/components/Chat/ChatStarbtn.vue";
+export default { components: { ChatHistory, ChatStarbtn } };
 </script>
 <template>
   <div class="chat_main_page">
     <div class="chat_side_area">
       <ChatHistory />
-      <div class="chatstarbtn_block"></div>
+      <ChatStarbtn />
     </div>
     <div class="chat_main_area"></div>
   </div>
