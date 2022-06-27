@@ -1,7 +1,8 @@
 <script>
 import ChatHistory from "@/components/Chat/ChatHistory.vue";
 import ChatStarbtn from "@/components/Chat/ChatStarbtn.vue";
-export default { components: { ChatHistory, ChatStarbtn } };
+import ChatWindow from "@/components/Chat/ChatWindow.vue";
+export default { components: { ChatHistory, ChatStarbtn, ChatWindow } };
 </script>
 <template>
   <div class="chat_main_page">
@@ -9,7 +10,9 @@ export default { components: { ChatHistory, ChatStarbtn } };
       <ChatHistory />
       <ChatStarbtn />
     </div>
-    <div class="chat_main_area"></div>
+    <div class="chat_main_area">
+      <ChatWindow />
+    </div>
   </div>
 </template>
 <style lang="scss" scoped>
