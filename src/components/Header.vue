@@ -305,6 +305,10 @@ header {
         color: #0275b1;
         width: 100%;
       }
+      .other_btn:focus {
+        color: #0275b1;
+        width: 100%;
+      }
     }
   }
 }
