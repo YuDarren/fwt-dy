@@ -23,6 +23,9 @@ export default {};
     outline: none;
     cursor: pointer;
   }
+  .notification:hover {
+    border-left: 10px solid #0275b1;
+  }
   .notification:focus {
     border-left: 10px solid #0275b1;
   }

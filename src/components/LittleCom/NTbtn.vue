@@ -73,6 +73,15 @@ export default {
   .btn_num {
   }
 }
+
+.btn:hover {
+  border-left: 10px solid #0275b1;
+  outline: none;
+  .icon_name {
+    opacity: 0.6;
+  }
+}
+
 .btn:focus {
   border-left: 10px solid #0275b1;
   outline: none;

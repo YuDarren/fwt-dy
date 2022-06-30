@@ -75,7 +75,7 @@ export default { components: { MoreFilled, Edit, Upload } };
     position: relative;
     width: 100%;
     padding-top: 22%;
-    background-image: url("~@/assets/view.jpg");
+    background-image: url("~@/assets/view.png");
     background-size: cover;
     background-position: 50%;
     background-repeat: no-repeat;

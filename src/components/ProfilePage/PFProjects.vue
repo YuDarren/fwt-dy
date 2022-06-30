@@ -10,21 +10,21 @@ export default {};
     <div class="project_main">
       <div class="main">
         <div class="main_photo">
-          <a href="#"><img src="@/assets/project/project-01.jpg" alt="" /></a>
+          <a href="#"><img src="@/assets/project/pf_project01.png" alt="" /></a>
         </div>
         <div class="main_tit"><p>Zara redesign concept</p></div>
         <div class="main_time">UX/UI design, 15.07.2019</div>
       </div>
       <div class="main">
         <div class="main_photo">
-          <a href="#"><img src="@/assets/project/project-02.jpg" alt="" /></a>
+          <a href="#"><img src="@/assets/project/pf_project02.png" alt="" /></a>
         </div>
         <div class="main_tit"><p>SCTHON event brand identity</p></div>
         <div class="main_time">Graphic design, 03.31.2019</div>
       </div>
       <div class="main">
         <div class="main_photo">
-          <a href="#"><img src="@/assets/project/project-03.jpg" alt="" /></a>
+          <a href="#"><img src="@/assets/project/pf_project03.png" alt="" /></a>
         </div>
         <div class="main_tit"><p>Drozd. Brand identity. 2016</p></div>
         <div class="main_time">Graphic design, 03.04.2016</div>
