@@ -1,5 +1,12 @@
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      focusA: false,
+      focusB: false,
+    };
+  },
+};
 </script>
 <template>
   <div class="accdec_block">

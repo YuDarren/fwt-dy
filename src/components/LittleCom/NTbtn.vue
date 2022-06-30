@@ -10,7 +10,33 @@ export default {
     num: {
       type: String,
     },
+    hasColor: {
+      type: Boolean,
+    },
   },
+  data() {
+    return {
+      numColor: "",
+    };
+  },
+  mounted() {
+    console.log("hasColor: ", this.$props.hasColor);
+    if (this.$props.hasColor) {
+      this.$data.numColor = "color";
+    } else {
+      this.$data.numColor = "";
+    }
+  },
+  // watch: {
+  //   hasColor: function (newValue, oldValue) {
+  //     console.log("newValue: ", newValue);
+  //     if (newValue) {
+  //       this.$data.numColor = "color";
+  //     } else {
+  //       this.$data.numColor = "";
+  //     }
+  //   },
+  // },
 };
 </script>
 <template>
@@ -21,7 +47,7 @@ export default {
       </div>
       <div class="btn_name">{{ name }}</div>
     </div>
-    <div class="btn_num">{{ num }}</div>
+    <div :class="`btn_num ${numColor}`">{{ num }}</div>
   </div>
 </template>
 <style lang="scss" scoped>

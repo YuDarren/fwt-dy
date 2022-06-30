@@ -2,6 +2,23 @@
 import { Search, TopRight } from "@element-plus/icons-vue";
 export default {
   components: { Search, TopRight },
+  data() {
+    return {
+      currentPath: "",
+    };
+  },
+  watch: {
+    $route(to, from) {
+      this.$data.currentPath = to.name;
+      console.log("to: ", to);
+      console.log("from: ", from);
+
+      // this.$refs.btnFeed.classList.remove("focus");
+      // this.$refs.btnNetwork.classList.remove("focus");
+
+      // this.$refs[`btn${to.name}`]?.classList?.add("focus");
+    },
+  },
 };
 </script>
 <template>
@@ -14,13 +31,14 @@ export default {
       </div>
       <div class="nav_block">
         <div class="nav_main_block">
-          <div class="nav_btn">
+          <div ref="btnFeed" class="nav_btn">
+            <!-- <div :class="`nav_btn ${currentPath === 'Feed' ? 'focus' : ''}`"> -->
             <router-link class="router-link" to="/feed">
               <img src="../assets/menuIcon/feed_icon.svg" />
               <p>FEED</p>
             </router-link>
           </div>
-          <div class="nav_btn">
+          <div ref="btnNetwork" class="nav_btn">
             <router-link class="router-link" to="/network">
               <img src="../assets/menuIcon/network_icon.svg" />
               <p>NETWORK</p></router-link
@@ -67,9 +85,9 @@ export default {
       </div>
       <div class="other_block">
         <div class="other_btn">
-          <a href="#">
+          <router-link class="router-link" to="/other">
             <img src="../assets/menuIcon/other_icon.svg" />
-            <p>OTHER</p></a
+            <p>OTHER</p></router-link
           >
         </div>
       </div>
@@ -146,6 +164,7 @@ header {
             }
           }
         }
+
         .nav_btn:hover p {
           color: #0275b1;
         }
@@ -166,6 +185,14 @@ header {
           width: 80px;
         }
       }
+      .focus:after {
+        width: 80px !important;
+      }
+
+      .focus p {
+        color: #0275b1 !important;
+      }
+
       .nav_search_block {
         width: 25%;
         height: 100%;
