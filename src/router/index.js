@@ -5,7 +5,7 @@ import Network from "@/views/Network.vue";
 import Jobs from "@/views/Jobs.vue";
 import Chat from "@/views/Chat.vue";
 import Notices from "@/views/Notices.vue";
-import Other from "@/views/Other.vue";
+import Search from "@/components/Search.vue";
 const routes = [
   {
     path: "/",
@@ -38,10 +38,11 @@ const routes = [
     component: Notices,
   },
   {
-    path: "/other",
-    name: "Other",
-    component: Other,
+    path: "/search",
+    name: "Search",
+    component: Search,
   },
+
   // {
   //   path: "/about",
   //   name: "about",
