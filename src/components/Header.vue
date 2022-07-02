@@ -1,7 +1,10 @@
 <script>
 import { Search, TopRight } from "@element-plus/icons-vue";
+import { ref } from "@vue/reactivity";
+import Other from "@/components/Other.vue";
+import Searchpage from "@/components/Search.vue";
 export default {
-  components: { Search, TopRight },
+  components: { Search, TopRight, Other, Searchpage },
   data() {
     return {
       currentPath: "",
@@ -18,6 +21,18 @@ export default {
 
       // this.$refs[`btn${to.name}`]?.classList?.add("focus");
     },
+  },
+  setup() {
+    const isOtherOpen = ref(false);
+    const isSearchOpen = ref(false);
+    const handOpenClass = () => {
+      isOtherOpen.value = !isOtherOpen.value;
+    };
+    const handSearchClass = () => {
+      isSearchOpen.value = !isSearchOpen.value;
+    };
+
+    return { isOtherOpen, handOpenClass, isSearchOpen, handSearchClass };
   },
 };
 </script>
@@ -65,7 +80,7 @@ export default {
           </div>
         </div>
         <div class="nav_search_block">
-          <el-icon><Search /></el-icon>
+          <el-icon @click="handSearchClass"><Search /></el-icon>
           <input type="text" placeholder="Search" size="22" />
         </div>
         <div class="nav_user_block">
@@ -84,12 +99,18 @@ export default {
         </div>
       </div>
       <div class="other_block">
-        <div class="other_btn">
-          <router-link class="router-link" to="/other">
+        <div class="other_btn" @click="handOpenClass">
+          <a>
             <img src="../assets/menuIcon/other_icon.svg" />
-            <p>OTHER</p></router-link
+            <p>OTHER</p></a
           >
         </div>
+      </div>
+      <div class="search" v-show="isSearchOpen">
+        <Searchpage />
+      </div>
+      <div class="other" v-show="isOtherOpen">
+        <Other :handClick="handOpenClass" :bool="isOtherOpen" />
       </div>
     </div>
   </header>
@@ -98,32 +119,31 @@ export default {
 <style lang="scss" scoped>
 header {
   background-color: #ffffff;
+  position: relative;
   .h_menu {
     height: 80px;
     width: 100%;
     border-bottom: 1px solid #f4f4f4;
     display: flex;
-
+    position: relative;
     .logo_block {
       height: 100%;
-      width: 5%;
+      width: 130px;
       border-right: 1px solid #f4f4f4;
-      padding-left: 40px;
-      padding-right: 40px;
-      margin-left: 20px;
-
+      display: flex;
+      align-items: center;
+      justify-content: center;
       img {
         width: 46px;
         height: 46px;
-        padding-top: 15px;
       }
     }
     .nav_block {
       width: 90%;
       display: flex;
       align-items: center;
-      justify-content: flex-start;
-
+      justify-content: space-between;
+      position: static;
       .nav_main_block {
         width: 40%;
         align-items: center;
@@ -194,17 +214,20 @@ header {
       }
 
       .nav_search_block {
-        width: 25%;
+        position: relative;
+        width: 360px;
         height: 100%;
         border-left: 1px solid #f4f4f4;
         display: flex;
         align-items: center;
-        padding-left: 30px;
+
         .el-icon {
+          margin-left: 30px;
           font-size: 22px;
           width: 24px;
           height: 24px;
           color: #0275b1;
+          cursor: pointer;
         }
         input {
           border: none;
@@ -215,6 +238,7 @@ header {
           font-size: 16px;
           text-transform: capitalize;
           margin-left: 8px;
+          cursor: pointer;
         }
       }
 
@@ -223,7 +247,7 @@ header {
         display: flex;
         padding-left: 35px;
         border-left: 1px solid #f4f4f4;
-        width: 30%;
+        width: 330px;
         align-items: center;
 
         .avatar_img {
@@ -282,13 +306,14 @@ header {
       }
     }
     .other_block {
-      width: 5%;
+      width: 90px;
       position: relative;
       display: flex;
       justify-content: center;
       border-left: 1px solid #f4f4f4;
       border-right: 1px solid #f4f4f4;
       margin-right: 40px;
+      cursor: pointer;
       .other_btn {
         width: 100%;
         height: 100%;
@@ -336,6 +361,16 @@ header {
         color: #0275b1;
         width: 100%;
       }
+    }
+    .other {
+      position: absolute;
+      right: 0px;
+      z-index: 1000;
+    }
+    .search {
+      position: absolute;
+      right: 500px;
+      z-index: 1000;
     }
   }
 }

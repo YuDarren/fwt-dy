@@ -2,16 +2,25 @@
 import OtherAbovebtns from "@/components/Other/OtherAbovebtns.vue";
 import OtherMiddlebtns from "@/components/Other/OtherMiddlebtns.vue";
 import OtherUnderbtns from "@/components/Other/OtherUnderbtns.vue";
+import { onMounted } from "@vue/runtime-core";
 export default {
   components: { OtherAbovebtns, OtherMiddlebtns, OtherUnderbtns },
+  props: {
+    handClick: {
+      type: Function,
+    },
+    bool: {
+      type: Boolean,
+    },
+  },
 };
 </script>
 <template>
-  <div class="allpage">
+  <div class="allpage" v-show="bool">
     <div class="sidemenu">
       <div class="sidemenu_tit">
         <div class="left">
-          <div class="close">
+          <div class="close" @click="handClick">
             <img src="@/assets/menuIcon/close.png" alt="" />Close
           </div>
           <div class="tit">More from LinkedIn</div>
@@ -35,7 +44,7 @@ export default {
   backdrop-filter: blur(5px);
   display: flex;
   justify-content: flex-end;
-
+  width: 460px;
   .sidemenu {
     display: flex;
     align-items: flex-end;
@@ -56,8 +65,9 @@ export default {
           align-items: center;
           justify-content: center;
           width: 90px;
-          height: 90px;
+          height: 80px;
           font-size: 12px;
+          cursor: pointer;
         }
         .tit {
           display: flex;
@@ -74,7 +84,7 @@ export default {
           align-items: center;
           justify-content: center;
           width: 90px;
-          height: 90px;
+          height: 80px;
           font-size: 12px;
         }
       }

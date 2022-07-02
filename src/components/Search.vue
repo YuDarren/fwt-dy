@@ -33,11 +33,13 @@ export default {
   .search {
     background: #fff;
     width: 370px;
+
     .search_tit {
       display: flex;
       align-items: center;
       justify-content: space-between;
       padding: 20px 30px;
+      height: 40px;
       border-bottom: 1px solid #f4f4f4;
       .tit {
         font-size: 16px;
