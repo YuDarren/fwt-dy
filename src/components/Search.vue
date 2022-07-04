@@ -6,11 +6,19 @@ import SearchArticles from "@/components/Search/SearchArticles.vue";
 import SearchBtn from "@/components/Search/SearchBtn.vue";
 export default {
   components: { Search, SearchJobs, SearchUsers, SearchArticles, SearchBtn },
+  props: {
+    handClick: {
+      type: Function,
+    },
+    bool: {
+      type: Boolean,
+    },
+  },
 };
 </script>
 <template>
-  <div class="search_block">
-    <div class="search">
+  <div @click="handClick" class="search_block">
+    <div class="search" @show="bool">
       <div class="search_tit">
         <div class="tit">UX desig</div>
         <div class="icon">
@@ -30,10 +38,22 @@ export default {
 </template>
 <style lang="scss" scoped>
 .search_block {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  z-index: 998;
+  backdrop-filter: blur(5px);
   .search {
     background: #fff;
     width: 370px;
-
+    position: absolute;
+    top: 0px;
+    right: 500px;
+    z-index: 1000;
+    height: 700px; //限定高度
+    overflow-y: auto;
     .search_tit {
       display: flex;
       align-items: center;

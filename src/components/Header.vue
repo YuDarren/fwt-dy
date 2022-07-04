@@ -13,8 +13,8 @@ export default {
   watch: {
     $route(to, from) {
       this.$data.currentPath = to.name;
-      console.log("to: ", to);
-      console.log("from: ", from);
+      // console.log("to: ", to);
+      // console.log("from: ", from);
 
       // this.$refs.btnFeed.classList.remove("focus");
       // this.$refs.btnNetwork.classList.remove("focus");
@@ -22,17 +22,21 @@ export default {
       // this.$refs[`btn${to.name}`]?.classList?.add("focus");
     },
   },
+
   setup() {
     const isOtherOpen = ref(false);
     const isSearchOpen = ref(false);
-    const handOpenClass = () => {
+    const handOtherClass = () => {
       isOtherOpen.value = !isOtherOpen.value;
     };
     const handSearchClass = () => {
       isSearchOpen.value = !isSearchOpen.value;
+      // if (this.$refs.searchMain.contains(e.target)) {
+      //   isSearchOpen = false;
+      // }
     };
 
-    return { isOtherOpen, handOpenClass, isSearchOpen, handSearchClass };
+    return { isOtherOpen, handOtherClass, isSearchOpen, handSearchClass };
   },
 };
 </script>
@@ -103,18 +107,18 @@ export default {
         </div>
       </div>
       <div class="other_block">
-        <div class="other_btn" @click="handOpenClass">
+        <div class="other_btn" @click="handOtherClass">
           <a>
             <img src="../assets/menuIcon/other_icon.svg" />
             <p>OTHER</p></a
           >
         </div>
       </div>
-      <div class="search" v-show="isSearchOpen">
-        <Searchpage />
+      <div ref="searchMain" class="search" v-show="isSearchOpen">
+        <Searchpage :handClick="handSearchClass" :bool="isSearchOpen" />
       </div>
       <div class="other" v-show="isOtherOpen">
-        <Other :handClick="handOpenClass" :bool="isOtherOpen" />
+        <Other :handClick="handOtherClass" :bool="isOtherOpen" />
       </div>
     </div>
   </header>
@@ -367,13 +371,12 @@ header {
       }
     }
     .other {
-      position: absolute;
-      right: 0px;
+      position: fixed;
       z-index: 1000;
     }
     .search {
-      position: absolute;
-      right: 500px;
+      position: fixed;
+
       z-index: 1000;
     }
   }
