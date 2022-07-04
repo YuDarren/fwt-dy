@@ -1,10 +1,19 @@
 <script>
-export default {};
+import { ref, onMounted } from "@vue/runtime-core";
+export default {
+  setup() {
+    const btnfirst = ref(null);
+    onMounted(() => {
+      btnfirst.value.focus();
+    });
+    return { btnfirst };
+  },
+};
 </script>
 <template>
   <div class="btn_block">
     <div class="btn_wrap">
-      <div class="btn" tabindex="0" autofocus>PROFILE</div>
+      <div ref="btnfirst" class="btn" tabindex="0">PROFILE</div>
       <div class="btn" tabindex="0">ACTIVITY & INTERESTS</div>
       <div class="btn" tabindex="0">ARTICLES (3)</div>
     </div>

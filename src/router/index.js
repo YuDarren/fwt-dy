@@ -1,11 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router";
 import ProfilePage from "@/views/ProfilePage.vue";
-import Feed from "@/views/Feed.vue";
-import Network from "@/views/Network.vue";
-import Jobs from "@/views/Jobs.vue";
-import Chat from "@/views/Chat.vue";
-import Notices from "@/views/Notices.vue";
-import Search from "@/components/Search.vue";
+
 const routes = [
   {
     path: "/",
@@ -15,32 +10,27 @@ const routes = [
   {
     path: "/feed",
     name: "Feed",
-    component: Feed,
+    component: () => import("../views/Feed.vue"),
   },
   {
     path: "/network",
     name: "Network",
-    component: Network,
+    component: () => import("../views/Network.vue"),
   },
   {
     path: "/jobs",
     name: "Jobs",
-    component: Jobs,
+    component: () => import("../views/Jobs.vue"),
   },
   {
     path: "/chat",
     name: "Chat",
-    component: Chat,
+    component: () => import("../views/Chat.vue"),
   },
   {
     path: "/notices",
     name: "Notices",
-    component: Notices,
-  },
-  {
-    path: "/search",
-    name: "Search",
-    component: Search,
+    component: () => import("../views/Notices.vue"),
   },
 
   // {

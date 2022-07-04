@@ -46,33 +46,37 @@ export default {
       </div>
       <div class="nav_block">
         <div class="nav_main_block">
-          <div ref="btnFeed" class="nav_btn">
-            <!-- <div :class="`nav_btn ${currentPath === 'Feed' ? 'focus' : ''}`"> -->
+          <!-- <div ref="btnFeed" class="nav_btn"> -->
+          <div :class="`nav_btn ${currentPath === 'Feed' ? 'focus' : ''}`">
             <router-link class="router-link" to="/feed">
               <img src="../assets/menuIcon/feed_icon.svg" />
               <p>FEED</p>
             </router-link>
           </div>
-          <div ref="btnNetwork" class="nav_btn">
+          <!-- <div ref="btnNetwork" class="nav_btn"> -->
+          <div :class="`nav_btn ${currentPath === 'Network' ? 'focus' : ''}`">
             <router-link class="router-link" to="/network">
               <img src="../assets/menuIcon/network_icon.svg" />
               <p>NETWORK</p></router-link
             >
           </div>
-          <div class="nav_btn">
+          <!-- <div ref="btnJobs" class="nav_btn"> -->
+          <div :class="`nav_btn ${currentPath === 'Jobs' ? 'focus' : ''}`">
             <router-link class="router-link" to="/jobs">
               <img src="../assets/menuIcon/jobs_icon.svg" />
               <p>JOBS</p></router-link
             >
           </div>
-          <div class="nav_btn chat">
+          <!-- <div ref="btnChat" class="nav_btn chat"> -->
+          <div :class="`nav_btn ${currentPath === 'Chat' ? 'focus' : ''}`">
             <router-link class="router-link" to="/chat">
               <img src="../assets/menuIcon/chat_icon.svg" />
               <p>CHAT</p>
               <div class="chat-count">3</div>
             </router-link>
           </div>
-          <div class="nav_btn">
+          <!-- <div ref="btnNotices" class="nav_btn"> -->
+          <div :class="`nav_btn ${currentPath === 'Notices' ? 'focus' : ''}`">
             <router-link class="router-link" to="/notices">
               <img src="../assets/menuIcon/notices_icon.svg" />
               <p>NOTICES</p></router-link
