@@ -372,6 +372,7 @@ header {
     }
     .other {
       position: fixed;
+
       z-index: 1000;
     }
     .search {

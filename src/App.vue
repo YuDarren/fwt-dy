@@ -17,10 +17,11 @@ export default {
 </template>
 
 <style lang="scss">
-body {
+body::-webkit-scrollbar {
   font-family: sans-serif;
   background-color: #f7f9fb;
   margin: 0;
+  display: none;
 }
 a {
   background-color: transparent;

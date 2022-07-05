@@ -81,6 +81,9 @@ export default {
         }
       }
     }
+    ::-webkit-scrollbar {
+      display: none;
+    }
     .search_con {
       margin: 20px 30px;
     }
