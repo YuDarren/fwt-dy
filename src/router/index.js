@@ -1,5 +1,10 @@
 import { createRouter, createWebHistory } from "vue-router";
 import ProfilePage from "@/views/ProfilePage.vue";
+import Feed from "@/views/Feed.vue";
+import Network from "@/views/Network.vue";
+import Jobs from "@/views/Jobs.vue";
+import Chat from "@/views/Chat.vue";
+import Notices from "@/views/Notices.vue";
 
 const routes = [
   {
@@ -10,27 +15,27 @@ const routes = [
   {
     path: "/feed",
     name: "Feed",
-    component: () => import("../views/Feed.vue"),
+    component: Feed,
   },
   {
     path: "/network",
     name: "Network",
-    component: () => import("../views/Network.vue"),
+    component: Network,
   },
   {
     path: "/jobs",
     name: "Jobs",
-    component: () => import("../views/Jobs.vue"),
+    component: Jobs,
   },
   {
     path: "/chat",
     name: "Chat",
-    component: () => import("../views/Chat.vue"),
+    component: Chat,
   },
   {
     path: "/notices",
     name: "Notices",
-    component: () => import("../views/Notices.vue"),
+    component: Notices,
   },
 
   // {
