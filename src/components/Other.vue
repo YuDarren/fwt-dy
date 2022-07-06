@@ -42,6 +42,9 @@ export default {
   </div>
 </template>
 <style lang="scss" scoprd>
+::-webkit-scrollbar {
+  display: none;
+}
 .mask {
   width: 100%;
   height: 100%;
